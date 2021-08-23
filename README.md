@@ -12,6 +12,7 @@ Rather this script goes for VERBOSE scrapping with REGEX element parsing instead
 
 Design 
           Script \____________________________ SSLyse <----- Website SSL info
+                                                             
               |____ciphersuite.info TLS info
               
     
