@@ -1,7 +1,7 @@
 SSLazy SSL grader
 =================
 
-Run> python3 sslgrader.py <domain>
+Run> python3 sslgrader.py #www.example.com#
 
 To-do: add argument checking, element sanitisation.    
        
