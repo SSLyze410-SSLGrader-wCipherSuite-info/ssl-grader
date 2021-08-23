@@ -128,6 +128,214 @@ TLS discount score is: 0
 Cipher Suite score is: 30
 >>>Total SSL grade for  www.ocbc.com  is  90 /100. Grade is  A . >>>
 
+kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.bankofchina.com
+www.bankofchina.com
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Found
+Vulnerable Issue Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:-5
+TLS discount score is:-199
+Cipher Suite score is:20
+>>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
+
+Detail Results
+==============
+Go to results/<domain>.txt, all executed detail reports are saved in this folder.
+Manually results/<domain>.txt files as needed, script will only append data to it.
+
+Example Detail Report - www.bankofchina.com
+       
+kali@kali:~/Downloads/sslyze$ cat results/www.bankofchina.com.txt
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Found
+Vulnerable Issue Found
+<<< End SSL Grading <<<
+
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:-5
+TLS discount score is:-199
+Cipher Suite score is:20
+>>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
+
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.bankofchina.com:443                       => 123.124.191.45
+
+
+ SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
+ ---------------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             www.bankofchina.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  24e635c8dbb7783ba9232285eaa58ec4895ee6c1
+       Common Name:                       www.bankofchina.com
+       Issuer:                            Secure Site Pro Extended Validation CA G2
+       Serial Number:                     20984255454740395246010106896176242556
+       Not Before:                        2019-11-26
+       Not After:                         2021-11-26
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['www.bankofchina.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted, Extended Validation
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    www.bankofchina.com --> Secure Site Pro Extended Validation CA G2
+       Verified Chain:                    www.bankofchina.com --> Secure Site Pro Extended Validation CA G2 --> DigiCert High Assurance EV Root CA
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 3 SCTs included
+
+     Certificate #0 - OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+
+ SCAN COMPLETED IN 4.37 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.bankofchina.com:443                       => 123.124.191.45
+
+
+ SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
+ ---------------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 7.41 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.bankofchina.com:443                       => 123.124.191.45
+
+
+ SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
+ ---------------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 4 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+ SCAN COMPLETED IN 29.77 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.bankofchina.com:443                       => 219.141.191.45
+
+
+ SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 219.141.191.45
+ ---------------------------------------------------------
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 3 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    INSECURE - Not Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 3 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    INSECURE - Not Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 51.29 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.bankofchina.com:443                       => 123.124.191.45
+
+
+ SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
+ ---------------------------------------------------------
+
+ * ROBOT Attack:
+                                          VULNERABLE - Strong oracle, a real attack is possible.
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+
+ SCAN COMPLETED IN 11.39 S
+ -------------------------
+
+Machine Learning
+================
+SSLayzeSummary.txt is created in Parent folder to arrange the data into comma separated values (CSV) for ML such as Weka.
+Manually SSLayzeSummary.txt as needed, script will only append data to it.
+
 Researcher
 ==========
 Planning to use this grading script for massive scrapping / web crawlering exercise? If so, please pinned the ciphersuite.info lookup data to a file instead of curl lookup. Or else I will foresee ratelimiting similar to SSLlab API applied by ciphersuite.info. ***WARNING*** Play nice.
