@@ -347,6 +347,8 @@ SSLyze is made available under the terms of the GNU Affero General Public Licens
 
 Donation to Crypto Wallet
 -------------------------
+Developer need to eat too.
+
        ETH    0x7759366012ba41039a8d9aa7f4240b2c1423eea7
        USDT   0x7759366012ba41039a8d9aa7f4240b2c1423eea7
        BTC    1FS14XSENZwZqEfLKp1bGN39Xj9FoEBPSg
