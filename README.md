@@ -12,7 +12,8 @@ Rather this script goes for VERBOSE scrapping, wrapping with REGEX element parsi
 
 Design 
        
-          Script  (wrapping) \____________________________ SSLyse <----- Website SSL info
+          Script (wrapping)
+              |   \____________________________ SSLyse <----- Website SSL info
                (wrapping)                                               
               |____ciphersuite.info TLS info
               (json)                                               
