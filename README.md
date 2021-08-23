@@ -344,3 +344,10 @@ SSLazy SSL grader - Copyright (c) 2021 qTIbqT95oKqurzqyozuaoz9cqTqhoj==
 SSLyse - Copyright (c) 2021 Alban Diquet
 SSLyze is made available under the terms of the GNU Affero General Public License (AGPL). See LICENSE.txt for details and exceptions.     
 [documentation]: https://nabla-c0d3.github.io/sslyze/documentation
+
+Donation to Crypto Wallet
+-------------------------
+       ETH    0x7759366012ba41039a8d9aa7f4240b2c1423eea7
+       USDT   0x7759366012ba41039a8d9aa7f4240b2c1423eea7
+       BTC    1FS14XSENZwZqEfLKp1bGN39Xj9FoEBPSg
+       BNB    bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23, BNB Memo 386821235
