@@ -14,15 +14,15 @@ Rather this script goes for VERBOSE scrapping, wrapping with REGEX element parsi
 
 Design
 ======  
-          Script (wrapping)
-              |   \____________________________ SSLyse <----- Website SSL info
-               (wrapping)                                               
-              |____ciphersuite.info TLS info
-              (json)                                               
-              |____ (open to extension e.g. SSLLAB JSON API)
+-          Script (wrapping)
+-              |   \____________________________ SSLyse <----- Website SSL info
+-               (wrapping)                                               
+-              |____ciphersuite.info TLS info
+-              (json)                                               
+-              |____ (open to extension e.g. SSLLAB JSON API)
               
     
-This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
+-This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
 
 
 Files
@@ -57,104 +57,104 @@ Files
        -reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
 
 
-Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
+-Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
 
 Scoring table
 =============
-Excellent = 100% 
-A	   >= 80%
-B	   >= 70% 
-C	   >= 50%
-F 	   < 50%
+*Excellent = 100% 
+*A	   >= 80%
+*B	   >= 70% 
+*C	   >= 50%
+*F 	   < 50%
 
 
 Test Case 1 for A
 =================
-Certificate PASSED, Protocol Support TLS 1.2 and Cipher Suite has secure status.
-Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 80% 
+-Certificate PASSED, Protocol Support TLS 1.2 and Cipher Suite has secure status.
+-Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 80% 
 
 Test Case 2 for A
 =================
-Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
-Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 90% 
+-Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
+-Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 90% 
 
 Test Case 3 for B
 =================
-Certificate FAILED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
-Certificate = 0% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 70% 
+-Certificate FAILED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
+-Certificate = 0% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 70% 
 
 Test Case 4 for C
 =================
-Certificate FAILED, Protocol Support TLS 1.3 and Cipher Suite has secure status.
-Certificate = 0% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 50% 
+-Certificate FAILED, Protocol Support TLS 1.3 and Cipher Suite has secure status.
+-Certificate = 0% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 50% 
 
 Test Case 5 for F
 =================
-Certificate FAILED, Protocol Support TLS 1.0 and Cipher Suite has secure status.
-Certificate = 0% + Protocol Support = 0% + Cipher Suite = 40% :: Total = 40% 
+-Certificate FAILED, Protocol Support TLS 1.0 and Cipher Suite has secure status.
+-Certificate = 0% + Protocol Support = 0% + Cipher Suite = 40% :: Total = 40% 
 
 Test Case 6 for F
 =================
-Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has insecure status.
-Certificate = 30% + Protocol Support = 30% + Cipher Suite = -100% :: Total = -40% 
+-Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has insecure status.
+-Certificate = 30% + Protocol Support = 30% + Cipher Suite = -100% :: Total = -40% 
 
 Test Case 7 for Excellent
 =========================
-Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
-Certificate = 30% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 100% 
+-Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
+-Certificate = 30% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 100% 
 
 
 Output
 ======
-kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.google.com
-www.google.com
-<<< Start SSL Grading <<<
-Certificate integrity OK
-TLS13 OK
-TLS12 OK
-Older SSL/TLS Found
-Vulnerable Issue Not Found
-<<< End SSL Grading <<<
->>>Start Computing score>>>
-Certificate score is: 30
-TLS support score is: 15
-TLS discount score is: 0
-Cipher Suite score is: 20
->>>Total SSL grade for  www.google.com  is  65 /100. Grade is  C . >>>
+-kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.google.com
+-www.google.com
+-<<< Start SSL Grading <<<
+-Certificate integrity OK
+-TLS13 OK
+-TLS12 OK
+-Older SSL/TLS Found
+-Vulnerable Issue Not Found
+-<<< End SSL Grading <<<
+->>>Start Computing score>>>
+-Certificate score is: 30
+-TLS support score is: 15
+-TLS discount score is: 0
+-Cipher Suite score is: 20
+->>>Total SSL grade for  www.google.com  is  65 /100. Grade is  C . >>>
 
 
-kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.ocbc.com
-www.ocbc.com
-<<< Start SSL Grading <<<
-Certificate integrity OK
-TLS13 OK
-TLS12 OK
-Older SSL/TLS Not Found
-Vulnerable Issue Not Found
-<<< End SSL Grading <<<
->>>Start Computing score>>>
-Certificate score is: 30
-TLS support score is: 30
-TLS discount score is: 0
-Cipher Suite score is: 30
->>>Total SSL grade for  www.ocbc.com  is  90 /100. Grade is  A . >>>
+-kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.ocbc.com
+-www.ocbc.com
+-<<< Start SSL Grading <<<
+-Certificate integrity OK
+-TLS13 OK
+-TLS12 OK
+-Older SSL/TLS Not Found
+-Vulnerable Issue Not Found
+-<<< End SSL Grading <<<
+->>>Start Computing score>>>
+-Certificate score is: 30
+-TLS support score is: 30
+-TLS discount score is: 0
+-Cipher Suite score is: 30
+->>>Total SSL grade for  www.ocbc.com  is  90 /100. Grade is  A . >>>
 
 
-kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.bankofchina.com
-www.bankofchina.com
-<<< Start SSL Grading <<<
-Certificate integrity OK
-TLS13 Not Found
-TLS12 OK
-Older SSL/TLS Found
-Vulnerable Issue Found
-<<< End SSL Grading <<<
->>>Start Computing score>>>
-Certificate score is:30
-TLS support score is:-5
-TLS discount score is:-199
-Cipher Suite score is:20
->>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
+-kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.bankofchina.com
+-www.bankofchina.com
+-<<< Start SSL Grading <<<
+-Certificate integrity OK
+-TLS13 Not Found
+-TLS12 OK
+-Older SSL/TLS Found
+-Vulnerable Issue Found
+-<<< End SSL Grading <<<
+->>>Start Computing score>>>
+-Certificate score is:30
+-TLS support score is:-5
+-TLS discount score is:-199
+-Cipher Suite score is:20
+->>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
 
 Detail Results
 ==============
@@ -163,127 +163,127 @@ Manually purge results/#domain#.txt files as needed, script will only append dat
 
 Example Detail Report - www.bankofchina.com
        
-kali@kali:~/Downloads/sslyze$ cat results/www.bankofchina.com.txt
-<<< Start SSL Grading <<<
-Certificate integrity OK
-TLS13 Not Found
-TLS12 OK
-Older SSL/TLS Found
-Vulnerable Issue Found
-<<< End SSL Grading <<<
+-kali@kali:~/Downloads/sslyze$ cat results/www.bankofchina.com.txt
+-<<< Start SSL Grading <<<
+-Certificate integrity OK
+-TLS13 Not Found
+-TLS12 OK
+-Older SSL/TLS Found
+-Vulnerable Issue Found
+-<<< End SSL Grading <<<
 
->>>Start Computing score>>>
-Certificate score is:30
-TLS support score is:-5
-TLS discount score is:-199
-Cipher Suite score is:20
->>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
+->>>Start Computing score>>>
+-Certificate score is:30
+-TLS support score is:-5
+-TLS discount score is:-199
+-Cipher Suite score is:20
+->>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
 
- CHECKING HOST(S) AVAILABILITY
+- CHECKING HOST(S) AVAILABILITY
  
-   www.bankofchina.com:443                       => 123.124.191.45
+-   www.bankofchina.com:443                       => 123.124.191.45
 
- SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
+- SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
 
- * Certificates Information:
-       Hostname sent for SNI:             www.bankofchina.com
-       Number of certificates detected:   1
+- * Certificates Information:
+-       Hostname sent for SNI:             www.bankofchina.com
+-       Number of certificates detected:   1
        
-     Certificate #0 ( _RSAPublicKey )
-       SHA1 Fingerprint:                  24e635c8dbb7783ba9232285eaa58ec4895ee6c1
-       Common Name:                       www.bankofchina.com
-       Issuer:                            Secure Site Pro Extended Validation CA G2
-       Serial Number:                     20984255454740395246010106896176242556
-       Not Before:                        2019-11-26
-       Not After:                         2021-11-26
-       Public Key Algorithm:              _RSAPublicKey
-       Signature Algorithm:               sha256
-       Key Size:                          2048
-       Exponent:                          65537
-       DNS Subject Alternative Names:     ['www.bankofchina.com']
+-     Certificate #0 ( _RSAPublicKey )
+-       SHA1 Fingerprint:                  24e635c8dbb7783ba9232285eaa58ec4895ee6c1
+-       Common Name:                       www.bankofchina.com
+-       Issuer:                            Secure Site Pro Extended Validation CA G2
+-       Serial Number:                     20984255454740395246010106896176242556
+-       Not Before:                        2019-11-26
+-       Not After:                         2021-11-26
+-       Public Key Algorithm:              _RSAPublicKey
+-       Signature Algorithm:               sha256
+-       Key Size:                          2048
+-       Exponent:                          65537
+-       DNS Subject Alternative Names:     ['www.bankofchina.com']
 
-     Certificate #0 - Trust
-       Hostname Validation:               OK - Certificate matches server hostname
-       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
-       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
-       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
-       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted, Extended Validation
-       Windows CA Store (2021-02-08):     OK - Certificate is trusted
-       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
-       Received Chain:                    www.bankofchina.com --> Secure Site Pro Extended Validation CA G2
-       Verified Chain:                    www.bankofchina.com --> Secure Site Pro Extended Validation CA G2 --> DigiCert High Assurance EV Root CA
-       Received Chain Contains Anchor:    OK - Anchor certificate not sent
-       Received Chain Order:              OK - Order is valid
-       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+-     Certificate #0 - Trust
+-       Hostname Validation:               OK - Certificate matches server hostname
+-       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+-       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+-       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+-       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted, Extended Validation
+-       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+-       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+-       Received Chain:                    www.bankofchina.com --> Secure Site Pro Extended Validation CA G2
+-       Verified Chain:                    www.bankofchina.com --> Secure Site Pro Extended Validation CA G2 --> DigiCert High Assurance EV Root CA
+-       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+-       Received Chain Order:              OK - Order is valid
+-       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
 
-     Certificate #0 - Extensions
-       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
-       Certificate Transparency:          OK - 3 SCTs included
+-     Certificate #0 - Extensions
+-       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+-       Certificate Transparency:          OK - 3 SCTs included
 
-     Certificate #0 - OCSP Stapling
+-     Certificate #0 - OCSP Stapling
                                           NOT SUPPORTED - Server did not send back an OCSP response
 
- * TLS 1.3 Cipher Suites:
-     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+- * TLS 1.3 Cipher Suites:
+-     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
 
- * TLS 1.2 Cipher Suites:
-     Attempted to connect using 156 cipher suites.
+- * TLS 1.2 Cipher Suites:
+-     Attempted to connect using 156 cipher suites.
 
-     The server accepted the following 4 cipher suites:
-        TLS_RSA_WITH_AES_256_CBC_SHA                      256
-        TLS_RSA_WITH_AES_128_CBC_SHA                      128
-        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
-        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+-     The server accepted the following 4 cipher suites:
+-        TLS_RSA_WITH_AES_256_CBC_SHA                      256
+-        TLS_RSA_WITH_AES_128_CBC_SHA                      128
+-        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
+-        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
 
-     The group of cipher suites supported by the server has the following properties:
-       Forward Secrecy                    OK - Supported
-       Legacy RC4 Algorithm               OK - Not Supported
+-     The group of cipher suites supported by the server has the following properties:
+-       Forward Secrecy                    OK - Supported
+-       Legacy RC4 Algorithm               OK - Not Supported
 
- * TLS 1.1 Cipher Suites:
-     Attempted to connect using 80 cipher suites.
+- * TLS 1.1 Cipher Suites:
+-     Attempted to connect using 80 cipher suites.
 
-     The server accepted the following 3 cipher suites:
-        TLS_RSA_WITH_AES_256_CBC_SHA                      256
-        TLS_RSA_WITH_AES_128_CBC_SHA                      128
-        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
+-     The server accepted the following 3 cipher suites:
+-        TLS_RSA_WITH_AES_256_CBC_SHA                      256
+-        TLS_RSA_WITH_AES_128_CBC_SHA                      128
+-        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
 
-     The group of cipher suites supported by the server has the following properties:
-       Forward Secrecy                    INSECURE - Not Supported
-       Legacy RC4 Algorithm               OK - Not Supported
+-     The group of cipher suites supported by the server has the following properties:
+-       Forward Secrecy                    INSECURE - Not Supported
+-       Legacy RC4 Algorithm               OK - Not Supported
 
- * TLS 1.0 Cipher Suites:
-     Attempted to connect using 80 cipher suites.
+- * TLS 1.0 Cipher Suites:
+-     Attempted to connect using 80 cipher suites.
 
-     The server accepted the following 3 cipher suites:
-        TLS_RSA_WITH_AES_256_CBC_SHA                      256
-        TLS_RSA_WITH_AES_128_CBC_SHA                      128
-        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
+-     The server accepted the following 3 cipher suites:
+-        TLS_RSA_WITH_AES_256_CBC_SHA                      256
+-        TLS_RSA_WITH_AES_128_CBC_SHA                      128
+-        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
 
-     The group of cipher suites supported by the server has the following properties:
-       Forward Secrecy                    INSECURE - Not Supported
-       Legacy RC4 Algorithm               OK - Not Supported
+-     The group of cipher suites supported by the server has the following properties:
+-       Forward Secrecy                    INSECURE - Not Supported
+-       Legacy RC4 Algorithm               OK - Not Supported
 
- * SSL 3.0 Cipher Suites:
-     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+- * SSL 3.0 Cipher Suites:
+-     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
 
- * SSL 2.0 Cipher Suites:
-     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+- * SSL 2.0 Cipher Suites:
+-     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
  
- * ROBOT Attack:
-                                          VULNERABLE - Strong oracle, a real attack is possible.
+- * ROBOT Attack:
+-                                          VULNERABLE - Strong oracle, a real attack is possible.
 
- * OpenSSL Heartbleed:
-                                          OK - Not vulnerable to Heartbleed
+ -* OpenSSL Heartbleed:
+ -                                         OK - Not vulnerable to Heartbleed
 
- * Downgrade Attacks:
-       TLS_FALLBACK_SCSV:                 OK - Supported
+ -* Downgrade Attacks:
+ -      TLS_FALLBACK_SCSV:                 OK - Supported
 
- * Session Renegotiation:
-       Client Renegotiation DoS Attack:   OK - Not vulnerable
-       Secure Renegotiation:              OK - Supported
+ -* Session Renegotiation:
+ -      Client Renegotiation DoS Attack:   OK - Not vulnerable
+ -      Secure Renegotiation:              OK - Supported
 
- * OpenSSL CCS Injection:
-                                          OK - Not vulnerable to OpenSSL CCS injection
+ -* OpenSSL CCS Injection:
+ -                                         OK - Not vulnerable to OpenSSL CCS injection
                                           
 Machine Learning
 ================
