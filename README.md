@@ -11,8 +11,8 @@ But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of
 Feeding JSON is a piece of cake, just ingest the JSON to JQ and cherrypick what you need. This script can easily add this.
 Rather this script goes for VERBOSE scrapping, wrapping with REGEX element parsing instead, this will give another edge over what is already seen on Github (primarily SSLAB API JSON)
 
-Design 
-       
+Design
+======  
           Script (wrapping)
               |   \____________________________ SSLyse <----- Website SSL info
                (wrapping)                                               
@@ -24,6 +24,7 @@ Design
 This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
 
 Files
+=====
 1.     ciphersuite-mapping.py - Test Puller script for ciphersuite.info
 2.     ciphersuite-scoring.py - Test Mapping script for ciphersuite.info
 3.     ciphersuite-mapping.data_2021Aug - a data sample
@@ -32,7 +33,7 @@ Files
                                                              
     
 100% grading consists of 3 scoring sections and 1 non-scoring issue checker section.
-
+====================================================================================
 1.	Certificate amount to 30% maximum out of 100%
        Pass will get 30%, failed is 0%
 
@@ -53,10 +54,10 @@ Files
        fallback          Test a server for the TLS_FALLBACK_SCSV mechanism to prevent downgrade attacks.  
        reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
 
-
 Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
 
 Scoring table
+=============
 Excellent = 100% 
 A	   >= 80%
 B	   >= 70% 
@@ -65,37 +66,43 @@ F 	   < 50%
 
 
 Test Case 1 for A
+=================
 Certificate PASSED, Protocol Support TLS 1.2 and Cipher Suite has secure status.
 Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 80% 
 
 Test Case 2 for A
+=================
 Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
 Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 90% 
 
-Test Case 3 for B 
+Test Case 3 for B
+=================
 Certificate FAILED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
 Certificate = 0% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 70% 
 
-Test Case 4 for C 
+Test Case 4 for C
+=================
 Certificate FAILED, Protocol Support TLS 1.3 and Cipher Suite has secure status.
 Certificate = 0% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 50% 
 
-Test Case 5 for F 
+Test Case 5 for F
+=================
 Certificate FAILED, Protocol Support TLS 1.0 and Cipher Suite has secure status.
 Certificate = 0% + Protocol Support = 0% + Cipher Suite = 40% :: Total = 40% 
 
-Test Case 6 for – 
+Test Case 6 for F
+=================
 Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has insecure status.
 Certificate = 30% + Protocol Support = 30% + Cipher Suite = -100% :: Total = -40% 
 
-Test Case 7 for Excellent 
+Test Case 7 for Excellent
+=========================
 Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
 Certificate = 30% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 100% 
 
 
 Output
 ======
-
 kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.google.com
 www.google.com
 <<< Start SSL Grading <<<
@@ -112,6 +119,7 @@ TLS discount score is: 0
 Cipher Suite score is: 20
 >>>Total SSL grade for  www.google.com  is  65 /100. Grade is  C . >>>
 
+
 kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.ocbc.com
 www.ocbc.com
 <<< Start SSL Grading <<<
@@ -127,6 +135,7 @@ TLS support score is: 30
 TLS discount score is: 0
 Cipher Suite score is: 30
 >>>Total SSL grade for  www.ocbc.com  is  90 /100. Grade is  A . >>>
+
 
 kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.bankofchina.com
 www.bankofchina.com
@@ -167,21 +176,16 @@ TLS discount score is:-199
 Cipher Suite score is:20
 >>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
 
-
  CHECKING HOST(S) AVAILABILITY
  
-
    www.bankofchina.com:443                       => 123.124.191.45
 
-
  SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
- 
 
  * Certificates Information:
        Hostname sent for SNI:             www.bankofchina.com
        Number of certificates detected:   1
-
-
+       
      Certificate #0 ( _RSAPublicKey )
        SHA1 Fingerprint:                  24e635c8dbb7783ba9232285eaa58ec4895ee6c1
        Common Name:                       www.bankofchina.com
@@ -277,8 +281,7 @@ Cipher Suite score is:20
 
  * OpenSSL CCS Injection:
                                           OK - Not vulnerable to OpenSSL CCS injection
- 
-
+                                          
 Machine Learning
 ================
 SSLayzeSummary.txt is created in Parent folder to arrange the data into comma separated values (CSV) for ML such as Weka.
@@ -290,7 +293,6 @@ Planning to use this grading script for massive scrapping / web crawlering exerc
 
 SSLyze
 ======
-
 ![Run Tests](https://github.com/nabla-c0d3/sslyze/workflows/Run%20Tests/badge.svg)
 [![Downloads](https://pepy.tech/badge/sslyze)](https://pepy.tech/badge/sslyze)
 [![PyPI version](https://img.shields.io/pypi/v/sslyze.svg)](https://pypi.org/project/sslyze/)
