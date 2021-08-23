@@ -128,6 +128,9 @@ TLS discount score is: 0
 Cipher Suite score is: 30
 >>>Total SSL grade for  www.ocbc.com  is  90 /100. Grade is  A . >>>
 
+Researcher
+==========
+Planning to use this grading script for massive scrapping / web crawlering exercise? If so, please pinned the ciphersuite.info lookup data to a file instead of curl lookup. Or else I will foresee ratelimiting similar to SSLlab API applied by ciphersuite.info. ***WARNING*** Play nice.
 
 SSLyze
 ======
