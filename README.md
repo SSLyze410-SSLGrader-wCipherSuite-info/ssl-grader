@@ -5,28 +5,6 @@ Run> python3 sslgrader.py <domain>
 
 To-do: add argument checking, element sanitisation.    
        
-On Github, there are many SSLLab API SSL grading scripts and independent SSL checker scripts. But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of this SSL grading script. Feeding JSON is a piece of cake, just ingest the JSON to Manager like JQ and cherrypick what you need. Rather this script goes for VERBOSE scrapping with REGEX element parsing instead, adding another edge over what is already seen on Github primarily SSLAB API JSON.
-
-Design 
-       
-          Script \____________________________ SSLyse <----- Website SSL info
-                                                             
-              |____ciphersuite.info TLS info
-                                                             
-              |____ (open to extension e.g. SSLLAB JSON API)
-              
-    
-This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
-
-Files
-
-SSLazy SSL grader
-=================
-
-Run> python3 sslgrader.py <domain>
-
-To-do: add argument checking, element sanitisation.    
-       
 On Github, there are many SSLLab API SSL grading scripts and independent SSL checker scripts.
 But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of this SSL scripts.
 Feeding JSON is a piece of cake, just ingest the JSON to JQ and cherrypick what you need. This script can easily add this.
