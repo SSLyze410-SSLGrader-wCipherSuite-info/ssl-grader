@@ -169,13 +169,13 @@ Cipher Suite score is:20
 
 
  CHECKING HOST(S) AVAILABILITY
- -----------------------------
+ 
 
    www.bankofchina.com:443                       => 123.124.191.45
 
 
  SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
- ---------------------------------------------------------
+ 
 
  * Certificates Information:
        Hostname sent for SNI:             www.bankofchina.com
@@ -216,32 +216,8 @@ Cipher Suite score is:20
      Certificate #0 - OCSP Stapling
                                           NOT SUPPORTED - Server did not send back an OCSP response
 
-
- SCAN COMPLETED IN 4.37 S
- ------------------------
- CHECKING HOST(S) AVAILABILITY
- -----------------------------
-
-   www.bankofchina.com:443                       => 123.124.191.45
-
-
- SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
- ---------------------------------------------------------
-
  * TLS 1.3 Cipher Suites:
      Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
-
-
- SCAN COMPLETED IN 7.41 S
- ------------------------
- CHECKING HOST(S) AVAILABILITY
- -----------------------------
-
-   www.bankofchina.com:443                       => 123.124.191.45
-
-
- SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
- ---------------------------------------------------------
 
  * TLS 1.2 Cipher Suites:
      Attempted to connect using 156 cipher suites.
@@ -256,17 +232,6 @@ Cipher Suite score is:20
        Forward Secrecy                    OK - Supported
        Legacy RC4 Algorithm               OK - Not Supported
 
- SCAN COMPLETED IN 29.77 S
- -------------------------
- CHECKING HOST(S) AVAILABILITY
- -----------------------------
-
-   www.bankofchina.com:443                       => 219.141.191.45
-
-
- SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 219.141.191.45
- ---------------------------------------------------------
-
  * TLS 1.1 Cipher Suites:
      Attempted to connect using 80 cipher suites.
 
@@ -278,7 +243,6 @@ Cipher Suite score is:20
      The group of cipher suites supported by the server has the following properties:
        Forward Secrecy                    INSECURE - Not Supported
        Legacy RC4 Algorithm               OK - Not Supported
-
 
  * TLS 1.0 Cipher Suites:
      Attempted to connect using 80 cipher suites.
@@ -292,25 +256,12 @@ Cipher Suite score is:20
        Forward Secrecy                    INSECURE - Not Supported
        Legacy RC4 Algorithm               OK - Not Supported
 
-
  * SSL 3.0 Cipher Suites:
      Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
 
  * SSL 2.0 Cipher Suites:
      Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
-
-
- SCAN COMPLETED IN 51.29 S
- -------------------------
- CHECKING HOST(S) AVAILABILITY
- -----------------------------
-
-   www.bankofchina.com:443                       => 123.124.191.45
-
-
- SCAN RESULTS FOR WWW.BANKOFCHINA.COM:443 - 123.124.191.45
- ---------------------------------------------------------
-
+ 
  * ROBOT Attack:
                                           VULNERABLE - Strong oracle, a real attack is possible.
 
@@ -326,10 +277,7 @@ Cipher Suite score is:20
 
  * OpenSSL CCS Injection:
                                           OK - Not vulnerable to OpenSSL CCS injection
-
-
- SCAN COMPLETED IN 11.39 S
- -------------------------
+ 
 
 Machine Learning
 ================
