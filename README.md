@@ -12,7 +12,7 @@ Rather this script goes for VERBOSE scrapping with REGEX element parsing instead
 
 Design 
           Script \____________________________ SSLyse <----- Website SSL info
-                \__ciphersuite.info TLS info
+              |____ciphersuite.info TLS info
               
     
 This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
