@@ -8,14 +8,14 @@ To-do: add argument checking, element sanitisation.
 On Github, there are many SSLLab API SSL grading scripts and independent SSL checker scripts.
 But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of this SSL scripts.
 Feeding JSON is a piece of cake, just ingest the JSON to JQ and cherrypick what you need. This script can easily add this.
-Rather this script goes for VERBOSE scrapping with REGEX element parsing instead, this will give another edge over what is already seen on Github (primariy SSLAB API JSON)
+Rather this script goes for VERBOSE scrapping, wrapping with REGEX element parsing instead, this will give another edge over what is already seen on Github (primariy SSLAB API JSON)
 
 Design 
        
-          Script \____________________________ SSLyse <----- Website SSL info
-                                                             
+          Script  (wrapping) \____________________________ SSLyse <----- Website SSL info
+               (wrapping)                                               
               |____ciphersuite.info TLS info
-                                                             
+              (json)                                               
               |____ (open to extension e.g. SSLLAB JSON API)
               
     
