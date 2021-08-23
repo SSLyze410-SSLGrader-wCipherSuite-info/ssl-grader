@@ -15,6 +15,8 @@ Design
           Script \____________________________ SSLyse <----- Website SSL info
                                                              
               |____ciphersuite.info TLS info
+                                                             
+              |____ (open to extension e.g. SSLLAB JSON API)
               
     
 This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
