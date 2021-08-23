@@ -11,6 +11,7 @@ But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of
 Feeding JSON is a piece of cake, just ingest the JSON to JQ and cherrypick what you need. This script can easily add this.
 Rather this script goes for VERBOSE scrapping, wrapping with REGEX element parsing instead, this will give another edge over what is already seen on Github (primarily SSLAB API JSON)
 
+
 Design
 ======  
           Script (wrapping)
@@ -22,6 +23,7 @@ Design
               
     
 This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
+
 
 Files
 =====
@@ -53,6 +55,7 @@ Files
        heartbleed        Test a server for the OpenSSL Heartbleed vulnerability.
        fallback          Test a server for the TLS_FALLBACK_SCSV mechanism to prevent downgrade attacks.  
        reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
+
 
 Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
 
