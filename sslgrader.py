@@ -1,6 +1,7 @@
 import sys
 import subprocess
 import re
+import os
 
 python_version="/usr/bin/python3.9"
 cert_score = 0
@@ -13,6 +14,7 @@ aDIC = {}
 gTLS = []
 webdomain = ""
 outputfile = ""
+banner = ""
 
 def main():
     # print command line arguments
@@ -65,14 +67,17 @@ def sslyzeDomain(webdomain, gTLS):
     stdoutcertdata = subprocess.getoutput(python_version + " -m sslyze --certinfo " + webdomain)
     #print(stdoutcertdata)
     global outputfile
+    global banner
     outputfile += stdoutcertdata
 
     global cert_score
     if re.search("FAILED", stdoutcertdata):
         print('Certificate FAILED')
+        banner += "Certificate FAILED\n"
         cert_score = -30
     else:
         print('Certificate integrity OK')
+        banner += "Certificate integrity OK\n"
         cert_score = 30
 
     stdoutTLS13data = subprocess.getoutput(python_version + " -m sslyze --tlsv1_3 " + webdomain)
@@ -83,9 +88,11 @@ def sslyzeDomain(webdomain, gTLS):
     global TLS_support_score
     if re.search("The server accepted the", stdoutTLS13data):
         print('TLS13 OK')
+        banner += "TLS13 OK\n"
         TLS_support_score += 20
     else:
         print('TLS13 Not Found')
+        banner += "TLS13 Not Found\n"
 
     stdoutTLS12data = subprocess.getoutput(python_version + " -m sslyze --tlsv1_2 " + webdomain)
     #print(stdoutTLS12data)
@@ -94,9 +101,11 @@ def sslyzeDomain(webdomain, gTLS):
 
     if re.search("The server accepted the", stdoutTLS12data):
         print('TLS12 OK')
+        banner += "TLS12 OK\n"
         TLS_support_score += 10
     else:
         print('TLS12 Not Found')
+        banner += "TLS12 Not Found\n"
 
     stdoutTLSOtherdata = subprocess.getoutput(python_version + " -m sslyze --sslv3 --sslv2 --tlsv1 --tlsv1_1 " + webdomain)
     #print(stdoutTLSOtherdata)
@@ -105,9 +114,11 @@ def sslyzeDomain(webdomain, gTLS):
 
     if re.search("The server accepted the", stdoutTLSOtherdata):
         print('Older SSL/TLS Found')
+        banner += "Older SSL/TLS Found\n"
         TLS_support_score += -15
     else:
         print('Older SSL/TLS Not Found')
+        banner += "Older SSL/TLS Not Found\n"
 
     stdoutDISdata = subprocess.getoutput(python_version + " -m sslyze --robot --openssl_ccs --heartbleed --fallback --reneg  " + webdomain)
     #print(stdoutDISdata)
@@ -116,9 +127,11 @@ def sslyzeDomain(webdomain, gTLS):
     global discount_score
     if re.search("VULNERABLE", stdoutDISdata):
         print('Vulnerable Issue Found')
+        banner += "Vulnerable Issue Found\n"
         discount_score += -199
     else:
         print('Vulnerable Issue Not Found')
+        banner += "Vulnerable Issue Not Found\n"
 
 def append_value(dict_obj, key, value):
     # Check if key exist in dict or not
@@ -148,6 +161,7 @@ def determine_grade(scores):
         return 'F'
 
 print("<<< Start SSL Grading <<<")
+banner = "<<< Start SSL Grading <<<\n" + banner
 #print(populateCipherSuiteDictionary(gDIC))
 populateCipherSuiteDictionary(gDIC)
 sslyzeDomain(str(sys.argv[1]), gTLS)
@@ -174,12 +188,35 @@ except:
 
 ciphersuite_keyex_strength_score = 40 + ciphersuite_keyex_strength_score
 
+print("<<< End SSL Grading <<<")
+banner += "<<< End SSL Grading <<<\n"
 total_score = cert_score + TLS_support_score + discount_score + ciphersuite_keyex_strength_score
-print("<<< End SSL Grading <<<\n>>>Start Computing score>>>")
-print("Certificate score is:", cert_score)
-print("TLS support score is:", TLS_support_score)
-print("TLS discount score is:", discount_score)
-print("Cipher Suite score is:", ciphersuite_keyex_strength_score)
-print(">>>Total SSL grade for ",str(str(sys.argv[1]))," is ",total_score,"/100. Grade is ", determine_grade(int(total_score)),". >>>")
+banner1 = ">>>Start Computing score>>>" \
+             + "\nCertificate score is:" +  str(cert_score) \
+             + "\nTLS support score is:" + str(TLS_support_score) \
+             + "\nTLS discount score is:" + str(discount_score) \
+             + "\nCipher Suite score is:" + str(ciphersuite_keyex_strength_score) \
+             + "\n>>>Total SSL grade for " + str(sys.argv[1]) + " is " + str(total_score) + "/100. Grade is " + determine_grade(int(total_score)) + ". >>>\n"
 
-print("",outputfile)
+print(banner1)
+
+try:
+    os.makedirs('results')
+except OSError as e:
+    pass
+
+subprocess.getoutput("echo \"" + banner + "\" > results\/" + str(sys.argv[1]) + ".txt")
+subprocess.getoutput("echo \"" + banner1 + "\" >> results\/" + str(sys.argv[1]) + ".txt")
+subprocess.getoutput("echo \"" + outputfile + "\" >> results\/" + str(sys.argv[1]) + ".txt")
+#print(outputfile)
+
+stdoutML_CSV = subprocess.getoutput("echo \"" \
+                                         + str(sys.argv[1]) + "," \
+                                         + determine_grade(int(total_score)) + "," \
+                                         + str(total_score) + "," \
+                                         + str(cert_score) + "," \
+                                         + str(TLS_support_score) + "," \
+                                         + str(discount_score) + "," \
+                                         + str(ciphersuite_keyex_strength_score) \
+                                         + "\" >> SSLayzeSummary.txt" \
+                                    )
