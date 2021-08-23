@@ -146,8 +146,8 @@ Cipher Suite score is:20
 
 Detail Results
 ==============
-Go to results/<domain>.txt, all executed detail reports are saved in this folder.
-Manually results/<domain>.txt files as needed, script will only append data to it.
+Go to results/#domain#.txt, all executed detail reports are saved in this folder.
+Manually purge results/#domain#.txt files as needed, script will only append data to it.
 
 Example Detail Report - www.bankofchina.com
        
@@ -282,7 +282,7 @@ Cipher Suite score is:20
 Machine Learning
 ================
 SSLayzeSummary.txt is created in Parent folder to arrange the data into comma separated values (CSV) for ML such as Weka.
-Manually SSLayzeSummary.txt as needed, script will only append data to it.
+Manually purge SSLayzeSummary.txt as needed, script will only append data to it.
 
 Researcher
 ==========
