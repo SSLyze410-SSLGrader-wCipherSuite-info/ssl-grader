@@ -5,7 +5,7 @@ Run> python3 sslgrader.py <domain>
 
 To-do: add argument checking, element sanitisation.    
        
-On Github, there are many SSLLab API SSL grading scripts and independent SSL checker scripts. But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of this SSL grading script. Feeding JSON is a piece of cake, just ingest the JSON to Manager like JQ and cherrypick what you need. Rather this script goes for VERBOSE scrapping with REGEX element parsing instead, will Githubber another edge over what is already seen on Github primarily SSLAB API JSON.
+On Github, there are many SSLLab API SSL grading scripts and independent SSL checker scripts. But all of them (as of Jan 2021) do not cover TLS 1.3 grading. Hence the born of this SSL grading script. Feeding JSON is a piece of cake, just ingest the JSON to Manager like JQ and cherrypick what you need. Rather this script goes for VERBOSE scrapping with REGEX element parsing instead, adding another edge over what is already seen on Github primarily SSLAB API JSON.
 
 Design 
        
