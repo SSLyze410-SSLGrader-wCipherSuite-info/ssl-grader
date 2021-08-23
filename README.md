@@ -11,6 +11,7 @@ Feeding JSON is a piece of cake, just ingest the JSON to JQ and cherrypick what 
 Rather this script goes for VERBOSE scrapping with REGEX element parsing instead, this will give another edge over what is already seen on Github (primariy SSLAB API JSON)
 
 Design 
+       
           Script \____________________________ SSLyse <----- Website SSL info
                                                              
               |____ciphersuite.info TLS info
