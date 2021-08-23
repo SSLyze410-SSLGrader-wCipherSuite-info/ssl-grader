@@ -36,25 +36,25 @@ Files
     
 100% grading consists of 3 scoring sections and 1 non-scoring issue checker section.
 ====================================================================================
-1.	Certificate amount to 30% maximum out of 100%
-       Pass will get 30%, failed is 0%
+1.	-Certificate amount to 30% maximum out of 100%
+       -Pass will get 30%, failed is 0%
 
-2.	Protocol Support amount to 30% maximum out of 100%
-       TLS1.3 and TLS1.2 both will get 30%, only TLS1.3 will get 20%
-       Older protocols such as TLS1.0 or SSLv3 will get -15% discount factor
+2.	-Protocol Support amount to 30% maximum out of 100%
+       -TLS1.3 and TLS1.2 both will get 30%, only TLS1.3 will get 20%
+       -Older protocols such as TLS1.0 or SSLv3 will get -15% discount factor
   
-3.	Cipher Suite (with Key Exchange) amount to 40% maximum out of 100%
-       Secure status will get 40% 
-       Recommended status will get 30% 
-       Weak status will get 20%
-       Insecure status will get -100% discount factor
+3.	-Cipher Suite (with Key Exchange) amount to 40% maximum out of 100%
+       -Secure status will get 40% 
+       -Recommended status will get 30% 
+       -Weak status will get 20%
+       -Insecure status will get -100% discount factor
 
-4.	Known Issue detection amount to immediate failure amount to -199% out of 100%
-       robot             Test a server for the ROBOT vulnerability.
-       openssl_ccs       Test a server for the OpenSSL CCS Injection vulnerability (CVE-2014-0224).
-       heartbleed        Test a server for the OpenSSL Heartbleed vulnerability.
-       fallback          Test a server for the TLS_FALLBACK_SCSV mechanism to prevent downgrade attacks.  
-       reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
+4.	-Known Issue detection amount to immediate failure amount to -199% out of 100%
+       -robot             Test a server for the ROBOT vulnerability.
+       -openssl_ccs       Test a server for the OpenSSL CCS Injection vulnerability (CVE-2014-0224).
+       -heartbleed        Test a server for the OpenSSL Heartbleed vulnerability.
+       -fallback          Test a server for the TLS_FALLBACK_SCSV mechanism to prevent downgrade attacks.  
+       -reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
 
 
 Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
