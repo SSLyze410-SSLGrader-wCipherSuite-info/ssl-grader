@@ -14,15 +14,15 @@ Rather this script goes for VERBOSE scrapping, wrapping with REGEX element parsi
 
 Design
 ======  
--          Script (wrapping)
--              |   \____________________________ SSLyse <----- Website SSL info
--               (wrapping)                                               
--              |____ciphersuite.info TLS info
--              (json)                                               
--              |____ (open to extension e.g. SSLLAB JSON API)
+          Script (wrapping)
+              |   \____________________________ SSLyse <----- Website SSL info
+               (wrapping)                                               
+              |____ciphersuite.info TLS info
+              (json)                                               
+              |____ (open to extension e.g. SSLLAB JSON API)
               
     
--This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
+This is based on SSLyze 4.1.0 with ciphersuite.info API - https://ciphersuite.info/cs/?singlepage=true
 
 
 Files
@@ -57,7 +57,7 @@ Files
        -reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
 
 
--Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
+Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
 
 Scoring table
 =============
@@ -70,57 +70,57 @@ Scoring table
 
 Test Case 1 for A
 =================
--Certificate PASSED, Protocol Support TLS 1.2 and Cipher Suite has secure status.
--Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 80% 
+- Certificate PASSED, Protocol Support TLS 1.2 and Cipher Suite has secure status.
+- Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 80% 
 
 Test Case 2 for A
 =================
--Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
--Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 90% 
+- Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
+- Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 90% 
 
 Test Case 3 for B
 =================
--Certificate FAILED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
--Certificate = 0% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 70% 
+- Certificate FAILED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
+- Certificate = 0% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 70% 
 
 Test Case 4 for C
 =================
--Certificate FAILED, Protocol Support TLS 1.3 and Cipher Suite has secure status.
--Certificate = 0% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 50% 
+- Certificate FAILED, Protocol Support TLS 1.3 and Cipher Suite has secure status.
+- Certificate = 0% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 50% 
 
 Test Case 5 for F
 =================
--Certificate FAILED, Protocol Support TLS 1.0 and Cipher Suite has secure status.
--Certificate = 0% + Protocol Support = 0% + Cipher Suite = 40% :: Total = 40% 
+- Certificate FAILED, Protocol Support TLS 1.0 and Cipher Suite has secure status.
+- Certificate = 0% + Protocol Support = 0% + Cipher Suite = 40% :: Total = 40% 
 
 Test Case 6 for F
 =================
--Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has insecure status.
--Certificate = 30% + Protocol Support = 30% + Cipher Suite = -100% :: Total = -40% 
+- Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has insecure status.
+- Certificate = 30% + Protocol Support = 30% + Cipher Suite = -100% :: Total = -40% 
 
 Test Case 7 for Excellent
 =========================
--Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
--Certificate = 30% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 100% 
+- Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
+- Certificate = 30% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 100% 
 
 
 Output
 ======
--kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.google.com
--www.google.com
--<<< Start SSL Grading <<<
--Certificate integrity OK
--TLS13 OK
--TLS12 OK
--Older SSL/TLS Found
--Vulnerable Issue Not Found
--<<< End SSL Grading <<<
-->>>Start Computing score>>>
--Certificate score is: 30
--TLS support score is: 15
--TLS discount score is: 0
--Cipher Suite score is: 20
-->>>Total SSL grade for  www.google.com  is  65 /100. Grade is  C . >>>
+kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.google.com
+www.google.com
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 OK
+TLS12 OK
+Older SSL/TLS Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is: 30
+TLS support score is: 15
+TLS discount score is: 0
+Cipher Suite score is: 20
+>>>Total SSL grade for  www.google.com  is  65 /100. Grade is  C . >>>
 
 
 -kali@kali:~/Downloads/sslyze$ python3 sslgrader.py www.ocbc.com
