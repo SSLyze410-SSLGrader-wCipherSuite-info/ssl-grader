@@ -68,33 +68,33 @@ Scoring table
        F 	   < 50%
 
 
-Test Case 1 for A
-=================
+Test Case 1 for A Grade
+=======================
        Certificate PASSED, Protocol Support TLS 1.2 and Cipher Suite has secure status.
        Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 80% 
 
-Test Case 2 for A
-=================
+Test Case 2 for A Grade
+=======================
        Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
        Certificate = 30% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 90% 
 
-Test Case 3 for B
-=================
+Test Case 3 for B Grade
+=======================
        Certificate FAILED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has secure status.
        Certificate = 0% + Protocol Support = 30% + Cipher Suite = 40% :: Total = 70% 
 
-Test Case 4 for C
-=================
+Test Case 4 for C Grade
+=======================
        Certificate FAILED, Protocol Support TLS 1.3 and Cipher Suite has secure status.
        Certificate = 0% + Protocol Support = 10% + Cipher Suite = 40% :: Total = 50% 
 
-Test Case 5 for F
-=================
+Test Case 5 for F Grade
+=======================
        Certificate FAILED, Protocol Support TLS 1.0 and Cipher Suite has secure status.
        Certificate = 0% + Protocol Support = 0% + Cipher Suite = 40% :: Total = 40% 
 
-Test Case 6 for F
-=================
+Test Case 6 for F Grade
+=======================
        Certificate PASSED, Protocol Support TLS 1.2 and TLS 1.3 and Cipher Suite has insecure status.
        Certificate = 30% + Protocol Support = 30% + Cipher Suite = -100% :: Total = -40% 
 
