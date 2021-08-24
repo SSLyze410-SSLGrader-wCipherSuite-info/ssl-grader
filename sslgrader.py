@@ -205,18 +205,38 @@ try:
 except OSError as e:
     pass
 
-subprocess.getoutput("echo \"" + banner + "\" > results\/" + str(sys.argv[1]) + ".txt")
-subprocess.getoutput("echo \"" + banner1 + "\" >> results\/" + str(sys.argv[1]) + ".txt")
-subprocess.getoutput("echo \"" + outputfile + "\" >> results\/" + str(sys.argv[1]) + ".txt")
+
+#subprocess.getoutput("echo \"" + banner + "\" > results\/" + str(sys.argv[1]) + ".txt")
+#subprocess.getoutput("echo \"" + banner1 + "\" >> results\/" + str(sys.argv[1]) + ".txt")
+#subprocess.getoutput("echo \"" + str(outputfile) + "\" >> results\/" + str(sys.argv[1]) + ".txt")
 #print(outputfile)
 
-stdoutML_CSV = subprocess.getoutput("echo \"" \
-                                         + str(sys.argv[1]) + "," \
-                                         + determine_grade(int(total_score)) + "," \
-                                         + str(total_score) + "," \
-                                         + str(cert_score) + "," \
-                                         + str(TLS_support_score) + "," \
-                                         + str(discount_score) + "," \
-                                         + str(ciphersuite_keyex_strength_score) \
-                                         + "\" >> SSLayzeSummary.txt" \
-                                    )
+new_path = "results/" + str(sys.argv[1]) + ".txt"
+new_handler = open(new_path,'w')
+new_handler.write(banner + banner1 + outputfile)
+new_handler.close()
+print(banner + banner1 + outputfile)
+
+#stdoutML_CSV = subprocess.getoutput("echo \"" \
+#                                         + str(sys.argv[1]) + "," \
+#                                         + determine_grade(int(total_score)) + "," \
+#                                         + str(total_score) + "," \
+#                                         + str(cert_score) + "," \
+#                                         + str(TLS_support_score) + "," \
+#                                         + str(discount_score) + "," \
+#                                         + str(ciphersuite_keyex_strength_score) \
+#                                         + "\" >> SSLayzeSummary.txt" \
+#                                    )
+
+new_path = "SSLayzeSummary.txt"
+new_handler = open(new_path,'a')
+new_handler.write(str(sys.argv[1]) + "," \
+		+ determine_grade(int(total_score)) + "," \
+		+ str(total_score) + "," \
+		+ str(cert_score) + "," \
+                + str(TLS_support_score) + "," \
+                + str(discount_score) + "\n" \
+                )
+
+new_handler.close()
+
