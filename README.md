@@ -409,15 +409,16 @@ Documentation is [available here][documentation].
 
 License
 -------
-SSLazy SSL grader - Copyright (c) 2021 qTIbqT95oKqurzqyozuaoz9cqTqhoj==
+SSLazy SSL grader - Copyright (c) 2021 YmF0Z3ZiYXR1cmF0QHR6bnZ5LnBieg==
+                                       qTIbqT95oKqurzqyozuaoz9cqTqhoj==
        
 SSLyse - Copyright (c) 2021 Alban Diquet
 SSLyze is made available under the terms of the GNU Affero General Public License (AGPL). See LICENSE.txt for details and exceptions.     
 [documentation]: https://nabla-c0d3.github.io/sslyze/documentation
 
-Donation to Crypto Wallet
--------------------------
-Developer need to eat too.
+Donation
+--------
+Developer need to eat too, send coins to crypto wallets.
 
        ETH    0x7759366012ba41039a8d9aa7f4240b2c1423eea7
        USDT   0x7759366012ba41039a8d9aa7f4240b2c1423eea7
