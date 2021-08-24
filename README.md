@@ -1,9 +1,9 @@
 SSLazy SSL grader
 =================
 
-Run> python3 sslgrader.py #www.example.com#
+Run> python3 sslgrader.py #www.example.com# (on Kali only)
 
-To-do: add argument checking, threading, element sanitisation ,more error checking/controls (good enough to run) 
+To-do: add Windows support ,argument checking, threading, element sanitisation ,more error checking/controls (good enough to run) 
 
        
 On Github, there are many SSLLab API SSL grading scripts and independent SSL checker scripts.
