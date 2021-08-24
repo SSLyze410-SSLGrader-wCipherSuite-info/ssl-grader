@@ -360,6 +360,11 @@ Researcher
 ==========
 Planning to use this grading script for data scraping / web crawlering exercise? If so, please pinned the ciphersuite.info lookup data to a file instead of curl lookup. Or else I will foresee ratelimiting similar to SSLlab API applied by ciphersuite.info. ***WARNING*** Play nice.
 
+Known Issue
+===========
+Domain return traceback instead of output.
+www.jbic.go.jp  Traceback (most recent call last): return_value = job_to_complete.function_to_call(*job_to_complete.function_arguments)
+
 SSLyze
 ======
 ![Run Tests](https://github.com/nabla-c0d3/sslyze/workflows/Run%20Tests/badge.svg)
