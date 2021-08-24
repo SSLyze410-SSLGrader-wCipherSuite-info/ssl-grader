@@ -156,8 +156,8 @@ Output
        Cipher Suite score is:20
        >>>Total SSL grade for www.bankofchina.com is -154/100. Grade is F. >>>
 
-Detail Results
-==============
+Detail Result
+=============
 Go to results/#domain#.txt, all executed detail reports are saved in this folder.
 Manually purge results/#domain#.txt files as needed, script will only append data to it.
 
