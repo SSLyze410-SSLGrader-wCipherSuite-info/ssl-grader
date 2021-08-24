@@ -34,27 +34,27 @@ Files
 5.     sslgrader.py - the SSL grading script.
                                                              
     
-100% grading consists of 3 scoring sections and 1 non-scoring issue checker section.
-====================================================================================
-1.	- Certificate amount to 30% maximum out of 100%
-       - Pass will get 30%, failed is 0%
+100% grading consists of 3 scoring sections (1 to 3) and 1 non-scoring issue checker section.
+=============================================================================================
+1.	Certificate amount to 30% maximum out of 100%
+        Pass will get 30%, failed is 0%
 
-2.	- Protocol Support amount to 30% maximum out of 100%
-       - TLS1.3 and TLS1.2 both will get 30%, only TLS1.3 will get 20%
-       - Older protocols such as TLS1.0 or SSLv3 will get -15% discount factor
+2.	Protocol Support amount to 30% maximum out of 100%
+        TLS1.3 and TLS1.2 both will get 30%, only TLS1.3 will get 20%
+        Older protocols such as TLS1.0 or SSLv3 will get -15% discount factor
   
-3.	- Cipher Suite (with Key Exchange) amount to 40% maximum out of 100%
-       - Secure status will get 40% 
-       - Recommended status will get 30% 
-       - Weak status will get 20%
-       - Insecure status will get -100% discount factor
+3.	Cipher Suite (with Key Exchange) amount to 40% maximum out of 100%
+        Secure status will get 40% 
+        Recommended status will get 30% 
+        Weak status will get 20%
+        Insecure status will get -100% discount factor
 
-4.	- Known Issue detection amount to immediate failure amount to -199% out of 100%
-       - robot             Test a server for the ROBOT vulnerability.
-       - openssl_ccs       Test a server for the OpenSSL CCS Injection vulnerability (CVE-2014-0224).
-       - heartbleed        Test a server for the OpenSSL Heartbleed vulnerability.
-       - fallback          Test a server for the TLS_FALLBACK_SCSV mechanism to prevent downgrade attacks.  
-       - reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
+4.	Known Issue detection amount to immediate failure amount to -199% out of 100%
+        robot             Test a server for the ROBOT vulnerability.
+        openssl_ccs       Test a server for the OpenSSL CCS Injection vulnerability (CVE-2014-0224).
+        heartbleed        Test a server for the OpenSSL Heartbleed vulnerability.
+        fallback          Test a server for the TLS_FALLBACK_SCSV mechanism to prevent downgrade attacks.  
+        reneg             Test a server for for insecure TLS renegotiation and client-initiated renegotiation.
 
 
 Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percentage -199% if found)
@@ -62,10 +62,10 @@ Total score = part 1(30%) + part 2(30%) + part 3(60%) + part 4 (discount percent
 Scoring table
 =============
        Excellent = 100% 
-       *A	   >= 80%
-       *B	   >= 70% 
-       *C	   >= 50%
-       *F 	   < 50%
+       A	   >= 80%
+       B	   >= 70% 
+       C	   >= 50%
+       F 	   < 50%
 
 
 Test Case 1 for A
@@ -235,11 +235,11 @@ Example Detail Report - www.bankofchina.com
          TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168
          TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
 
-      The group of cipher suites supported by the server has the following properties:
+       The group of cipher suites supported by the server has the following properties:
         Forward Secrecy                    OK - Supported
         Legacy RC4 Algorithm               OK - Not Supported
 
-      * TLS 1.1 Cipher Suites:
+       * TLS 1.1 Cipher Suites:
        Attempted to connect using 80 cipher suites.
 
        The server accepted the following 3 cipher suites:
@@ -251,7 +251,7 @@ Example Detail Report - www.bankofchina.com
         Forward Secrecy                    INSECURE - Not Supported
         Legacy RC4 Algorithm               OK - Not Supported
 
-      * TLS 1.0 Cipher Suites:
+       * TLS 1.0 Cipher Suites:
        Attempted to connect using 80 cipher suites.
 
        The server accepted the following 3 cipher suites:
@@ -263,7 +263,7 @@ Example Detail Report - www.bankofchina.com
          Forward Secrecy                    INSECURE - Not Supported
          Legacy RC4 Algorithm               OK - Not Supported
 
-      * SSL 3.0 Cipher Suites:
+       * SSL 3.0 Cipher Suites:
        Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
 
        * SSL 2.0 Cipher Suites:
@@ -290,6 +290,22 @@ Machine Learning
 ================
 SSLayzeSummary.txt is created in Parent folder to arrange the data into comma separated values (CSV) for ML such as Weka.
 Manually purge SSLayzeSummary.txt as needed, script will only append data to it.
+
+       kali@kali:~/Downloads/sslyze$ cat SSLayzeSummary.txt
+       www.ocbc.com,A,90,30,30,0,30
+       www.bankofchina.com,F,-154,30,-5,-199,20
+       test-dv-rsa.ssl.com,F,5,-30,15,0,20
+       expired-ecc-ev.ssl.com,F,5,-30,15,0,20
+
+       CSV Schema                                 
+       1. Domain
+       2. Grade
+       3. Total Score
+       4. Certificate Score
+       5. TLS Support Score
+       6. Discount Score
+       7. Cipher Suite i.e. Key Exchange, Bits strenght score
+ 
 
 Researcher
 ==========
