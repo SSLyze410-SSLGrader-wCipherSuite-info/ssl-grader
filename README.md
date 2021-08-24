@@ -305,11 +305,60 @@ Manually purge SSLayzeSummary.txt as needed, script will only append data to it.
        5. TLS Support Score
        6. Discount Score
        7. Cipher Suite i.e. Key Exchange, Bits strenght score
- 
+
+
+Data Scraping
+=============
+Using Linux command wizardry that fires each line as a single process in background.
+
+       kali@kali:~/Downloads/sslyze$ cat bank.txt
+       www.dbs.com
+       www.uob.com
+       www.ocbc.com
+       www.dbj.jp
+       www.jfc.go.jp
+       www.jbic.go.jp
+       www.bochk.com
+       www.bankofchina.com
+       www.citibank.com
+       www.bankrate.com
+       www.bankofamerica.com
+       www.santanderbank.com
+       www.citibankonline.com
+       www.paypal.com
+       www.binance.com
+       bankofindia.co.in
+       www.boi.com.sg
+       www.cbr.ru
+       www.rosbank.ru
+       www.maybank.com
+
+       kali@kali:~/Downloads/sslyze$ cat bank.txt | awk '{print("python3 sslgrader.py "$1" &")}'
+       python3 sslgrader.py www.dbs.com &
+       python3 sslgrader.py www.uob.com &
+       python3 sslgrader.py www.ocbc.com &
+       python3 sslgrader.py www.dbj.jp &
+       python3 sslgrader.py www.jfc.go.jp &
+       python3 sslgrader.py www.jbic.go.jp &
+       python3 sslgrader.py www.bochk.com &
+       python3 sslgrader.py www.bankofchina.com &
+       python3 sslgrader.py www.citibank.com &
+       python3 sslgrader.py www.bankrate.com &
+       python3 sslgrader.py www.bankofamerica.com &
+       python3 sslgrader.py www.santanderbank.com &
+       python3 sslgrader.py www.citibankonline.com &
+       python3 sslgrader.py www.paypal.com &
+       python3 sslgrader.py www.binance.com &
+       python3 sslgrader.py bankofindia.co.in &
+       python3 sslgrader.py www.boi.com.sg &
+       python3 sslgrader.py www.cbr.ru &
+       python3 sslgrader.py www.rosbank.ru &
+       python3 sslgrader.py www.maybank.com &
+
 
 Researcher
 ==========
-Planning to use this grading script for massive scrapping / web crawlering exercise? If so, please pinned the ciphersuite.info lookup data to a file instead of curl lookup. Or else I will foresee ratelimiting similar to SSLlab API applied by ciphersuite.info. ***WARNING*** Play nice.
+Planning to use this grading script for data scraping / web crawlering exercise? If so, please pinned the ciphersuite.info lookup data to a file instead of curl lookup. Or else I will foresee ratelimiting similar to SSLlab API applied by ciphersuite.info. ***WARNING*** Play nice.
 
 SSLyze
 ======
