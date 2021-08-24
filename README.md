@@ -363,7 +363,7 @@ Planning to use this grading script for data scraping / web crawlering exercise?
 Known Issue
 ===========
 Domain return traceback instead of output.
-www.jbic.go.jp  Traceback (most recent call last): return_value = job_to_complete.function_to_call(*job_to_complete.function_arguments)
+       www.jbic.go.jp  Traceback (most recent call last): return_value = job_to_complete.function_to_call(*job_to_complete.function_arguments)
 
 SSLyze
 ======
