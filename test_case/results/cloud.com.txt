@@ -1,0 +1,204 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:-5
+TLS discount score is:0
+Cipher Suite score is:20
+>>>Total SSL grade for cloud.com is 45/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   cloud.com:443                       => 54.86.126.30 
+
+
+
+
+ SCAN RESULTS FOR CLOUD.COM:443 - 54.86.126.30
+ ---------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             cloud.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  c778806f280741c1ef06b4f5e85b3b938c5b62ca
+       Common Name:                       citrixsummit.com
+       Issuer:                            DigiCert TLS RSA SHA256 2020 CA1
+       Serial Number:                     5371389300336621518768555667742024291
+       Not Before:                        2021-07-12
+       Not After:                         2022-07-20
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['citrixsummit.com', 'citrix.co.in', 'citrix.co.jp', 'citrix.co.kr', 'citrix.co.uk', 'citrix.com.au', 'citrix.com.br', 'citrix.com.cn', 'citrix.com.pl', 'citrix.cz', 'citrix.de', 'citrix.dk', 'citrix.es', 'citrix.fi', 'citrix.fr', 'citrix.it', 'citrix.nl', 'citrix.no', 'citrix.ru', 'citrix.se', 'citrix.com.tr', 'citrixservtech.com', 'citrixsynergy.com', 'dk.citrix.com', 'fi.citrix.com', 'microloadbalancer.com', 'no.citrix.com', 'rss.citrix.com', 'se.citrix.com', 'tr.citrix.com', 'cloud.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    citrixsummit.com --> DigiCert TLS RSA SHA256 2020 CA1
+       Verified Chain:                    citrixsummit.com --> DigiCert TLS RSA SHA256 2020 CA1 --> DigiCert Global Root CA
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 3 SCTs included
+
+     Certificate #0 - OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+
+ SCAN COMPLETED IN 127.95 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   cloud.com:443                       => 54.86.126.30 
+
+
+
+
+ SCAN RESULTS FOR CLOUD.COM:443 - 54.86.126.30
+ ---------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 41.90 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   cloud.com:443                       => 54.86.126.30 
+
+
+
+
+ SCAN RESULTS FOR CLOUD.COM:443 - 54.86.126.30
+ ---------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 14 cipher suites:
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                 256                      
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                 128                      
+        TLS_RSA_WITH_AES_256_GCM_SHA384                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA256                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_GCM_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 85.49 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   cloud.com:443                       => 54.86.126.30 
+
+
+
+
+ SCAN RESULTS FOR CLOUD.COM:443 - 54.86.126.30
+ ---------------------------------------------
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 6 cipher suites:
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                 256                      
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                 128                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 6 cipher suites:
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                 256                      
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                 128                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 138.11 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   cloud.com:443                       => 54.86.126.30 
+
+
+
+
+ SCAN RESULTS FOR CLOUD.COM:443 - 54.86.126.30
+ ---------------------------------------------
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable.
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+
+ SCAN COMPLETED IN 7.91 S
+ ------------------------

@@ -1,0 +1,168 @@
+<<< Start SSL Grading <<<
+Certificate FAILED
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:-30
+TLS support score is:10
+TLS discount score is:0
+Cipher Suite score is:20
+>>>Total SSL grade for sls.update.microsoft.com is 0/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   sls.update.microsoft.com:443                       => 52.242.101.226 
+
+
+
+
+ SCAN RESULTS FOR SLS.UPDATE.MICROSOFT.COM:443 - 52.242.101.226
+ --------------------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             sls.update.microsoft.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  7deb7623fcc8cb70c69005292c1b377d82a8799d
+       Common Name:                       sls.update.microsoft.com
+       Issuer:                            Microsoft Update Secure Server CA 2.1
+       Serial Number:                     1137338007022924913049120936782281518195147117
+       Not Before:                        2020-12-03
+       Not After:                         2021-12-03
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['sls.update.microsoft.com', '*.sls.update.microsoft.com', '*.backend.sls.update.microsoft.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Java CA Store (jdk-13.0.2):        FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Mozilla CA Store (2021-01-24):     FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    sls.update.microsoft.com --> Microsoft Update Secure Server CA 2.1
+       Verified Chain:                    sls.update.microsoft.com --> Microsoft Update Secure Server CA 2.1 --> Microsoft Root Certificate Authority 2011
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          NOT SUPPORTED - Extension not found
+
+     Certificate #0 - OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+
+ SCAN COMPLETED IN 155.88 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   sls.update.microsoft.com:443                       => 40.125.122.176 
+
+
+
+
+ SCAN RESULTS FOR SLS.UPDATE.MICROSOFT.COM:443 - 40.125.122.176
+ --------------------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 49.82 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   sls.update.microsoft.com:443                       => 20.54.89.106 
+
+
+
+
+ SCAN RESULTS FOR SLS.UPDATE.MICROSOFT.COM:443 - 20.54.89.106
+ ------------------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 4 cipher suites:
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 93.97 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   sls.update.microsoft.com:443                       => 52.152.110.14 
+
+
+
+
+ SCAN RESULTS FOR SLS.UPDATE.MICROSOFT.COM:443 - 52.152.110.14
+ -------------------------------------------------------------
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 105.70 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   sls.update.microsoft.com:443                       => 20.54.89.106 
+
+
+
+
+ SCAN RESULTS FOR SLS.UPDATE.MICROSOFT.COM:443 - 20.54.89.106
+ ------------------------------------------------------------
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable, RSA cipher suites not supported.
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+
+ SCAN COMPLETED IN 2.31 S
+ ------------------------

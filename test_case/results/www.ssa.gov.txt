@@ -1,0 +1,179 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:10
+TLS discount score is:0
+Cipher Suite score is:20
+>>>Total SSL grade for www.ssa.gov is 60/100. Grade is C. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.ssa.gov:443                       => 137.200.39.19 
+
+
+
+
+ SCAN RESULTS FOR WWW.SSA.GOV:443 - 137.200.39.19
+ ------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             www.ssa.gov
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  8c53fc3ee58b280e5ed1aaf5d190a021b057fbf1
+       Common Name:                       www.ssa.gov
+       Issuer:                            DigiCert SHA2 Extended Validation Server CA
+       Serial Number:                     7000821986828231759488601477840483664
+       Not Before:                        2021-06-30
+       Not After:                         2021-10-17
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['www.ssa.gov', 'ai.ssa.gov', 'best.ssa.gov', 'beta.ssa.gov', 'edata.ssa.gov', 'eme.ssa.gov', 'faq-es.ssa.gov', 'ftp.ssa.gov', 'hspd12.ssa.gov', 'ipv6.segurosocial.gov', 'ipv6.socialsecurity.gov', 'ipv6.ssa.gov', 'myaccount.socialsecurity.gov', 'myaccount.ssa.gov', 'policy.ssa.gov', 'prisonedata.ssa.gov', 'remac.ssa.gov', 'search.socialsecurity.gov', 'search.ssa.gov', 'secure.ssa.gov', 'segurosocial.gov', 'signup.socialsecurity.gov', 'signup.ssa.gov', 'socialsecurity.gov', 'ssa.gov', 'tls.ssa.gov', 'wwwtest-origin.ssa.gov', 'wwwtest.ssa.gov', 'www-origin.ssa.gov', 'www.myaccount.socialsecurity.gov', 'www.open.socialsecurity.gov', 'www.open.ssa.gov', 'www.segurosocial.gov', 'www.signup.socialsecurity.gov', 'www.socialsecurity.gov']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted, Extended Validation
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    www.ssa.gov --> DigiCert SHA2 Extended Validation Server CA
+       Verified Chain:                    www.ssa.gov --> DigiCert SHA2 Extended Validation Server CA --> DigiCert High Assurance EV Root CA
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 3 SCTs included
+
+     Certificate #0 - OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+
+ SCAN COMPLETED IN 4.44 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.ssa.gov:443                       => 137.200.4.16 
+
+
+
+
+ SCAN RESULTS FOR WWW.SSA.GOV:443 - 137.200.4.16
+ -----------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 3.65 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.ssa.gov:443                       => 137.200.39.19 
+
+
+
+
+ SCAN RESULTS FOR WWW.SSA.GOV:443 - 137.200.39.19
+ ------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 15 cipher suites:
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                 256                      
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                 128                      
+        TLS_RSA_WITH_AES_256_GCM_SHA384                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA256                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_GCM_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256       256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 18.48 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.ssa.gov:443                       => 137.200.39.19 
+
+
+
+
+ SCAN RESULTS FOR WWW.SSA.GOV:443 - 137.200.39.19
+ ------------------------------------------------
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 31.43 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   www.ssa.gov:443                       => 137.200.4.16 
+
+
+
+
+ SCAN RESULTS FOR WWW.SSA.GOV:443 - 137.200.4.16
+ -----------------------------------------------
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable.
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+
+ SCAN COMPLETED IN 7.80 S
+ ------------------------

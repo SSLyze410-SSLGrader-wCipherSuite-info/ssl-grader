@@ -1,0 +1,201 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Found
+Vulnerable Issue Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:-5
+TLS discount score is:-199
+Cipher Suite score is:20
+>>>Total SSL grade for loki.delve.office.com is -154/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   loki.delve.office.com:443                       => 52.111.240.2 
+
+
+
+
+ SCAN RESULTS FOR LOKI.DELVE.OFFICE.COM:443 - 52.111.240.2
+ ---------------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             loki.delve.office.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  b2687fa71e632177327b2134287722722b9692b4
+       Common Name:                       loki.delve.office.com
+       Issuer:                            DigiCert Cloud Services CA-1
+       Serial Number:                     3310409467836109399508033449968250765
+       Not Before:                        2020-11-26
+       Not After:                         2021-11-25
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['loki.delve.office.com', '*.loki.delve.office.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    loki.delve.office.com --> DigiCert Cloud Services CA-1
+       Verified Chain:                    loki.delve.office.com --> DigiCert Cloud Services CA-1 --> DigiCert Global Root CA
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          WARNING - Only 2 SCTs included but Google recommends 3 or more
+
+     Certificate #0 - OCSP Stapling
+       OCSP Response Status:              SUCCESSFUL
+       Validation w/ Mozilla Store:       OK - Response is trusted
+       Responder Key Hash:                b'\xddQ\xd0\xa21s\xa9s\xae\x8f\xb4\x01~]\x8cW\xcb\x9f\xf0\xf7'
+       Cert Status:                       GOOD
+       Cert Serial Number:                3310409467836109399508033449968250765
+       This Update:                       2021-08-23
+       Next Update:                       2021-08-30
+
+
+ SCAN COMPLETED IN 105.18 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   loki.delve.office.com:443                       => 52.111.240.2 
+
+
+
+
+ SCAN RESULTS FOR LOKI.DELVE.OFFICE.COM:443 - 52.111.240.2
+ ---------------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 77.70 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   loki.delve.office.com:443                       => 52.111.240.2 
+
+
+
+
+ SCAN RESULTS FOR LOKI.DELVE.OFFICE.COM:443 - 52.111.240.2
+ ---------------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 10 cipher suites:
+        TLS_RSA_WITH_AES_256_GCM_SHA384                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA256                   256                      
+        TLS_RSA_WITH_AES_128_GCM_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 136.13 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   loki.delve.office.com:443                       => 52.111.240.2 
+
+
+
+
+ SCAN RESULTS FOR LOKI.DELVE.OFFICE.COM:443 - 52.111.240.2
+ ---------------------------------------------------------
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 3 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 4 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 13.68 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   loki.delve.office.com:443                       => 52.111.240.2 
+
+
+
+
+ SCAN RESULTS FOR LOKI.DELVE.OFFICE.COM:443 - 52.111.240.2
+ ---------------------------------------------------------
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable.
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 VULNERABLE - Signaling cipher suite not supported
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+
+ SCAN COMPLETED IN 1.03 S
+ ------------------------

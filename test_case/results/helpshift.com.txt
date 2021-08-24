@@ -1,0 +1,156 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:10
+TLS discount score is:0
+Cipher Suite score is:40
+>>>Total SSL grade for helpshift.com is 80/100. Grade is A. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   helpshift.com:443                       => 45.79.27.160 
+
+
+
+
+ SCAN RESULTS FOR HELPSHIFT.COM:443 - 45.79.27.160
+ -------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             helpshift.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  bbed7efc195e09a6bc7352d6da7055003cdc2f5f
+       Common Name:                       helpshift.com
+       Issuer:                            R3
+       Serial Number:                     367502620411504238383468629176989433351443
+       Not Before:                        2021-07-03
+       Not After:                         2021-10-01
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          4096
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['helpshift.com', 'www.helpshift.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    helpshift.com --> R3 --> ISRG Root X1
+       Verified Chain:                    helpshift.com --> R3 --> ISRG Root X1
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          WARNING - Only 2 SCTs included but Google recommends 3 or more
+
+     Certificate #0 - OCSP Stapling
+       OCSP Response Status:              SUCCESSFUL
+       Validation w/ Mozilla Store:       OK - Response is trusted
+       Responder Name:                    CN=R3,O=Let's Encrypt,C=US
+       Cert Status:                       GOOD
+       Cert Serial Number:                367502620411504238383468629176989433351443
+       This Update:                       2021-08-20
+       Next Update:                       2021-08-27
+
+
+ SCAN COMPLETED IN 62.72 S
+ -------------------------
+KilledKilled
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   helpshift.com:443                       => 45.79.27.160 
+
+
+
+
+ SCAN RESULTS FOR HELPSHIFT.COM:443 - 45.79.27.160
+ -------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 2 cipher suites:
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 140.37 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   helpshift.com:443                       => 45.79.27.160 
+
+
+
+
+ SCAN RESULTS FOR HELPSHIFT.COM:443 - 45.79.27.160
+ -------------------------------------------------
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 32.94 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   helpshift.com:443                       => 45.79.27.160 
+
+
+
+
+ SCAN RESULTS FOR HELPSHIFT.COM:443 - 45.79.27.160
+ -------------------------------------------------
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable, RSA cipher suites not supported.
+
+
+ SCAN COMPLETED IN 2.14 S
+ ------------------------

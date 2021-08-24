@@ -1,0 +1,173 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 OK
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:30
+TLS discount score is:0
+Cipher Suite score is:20
+>>>Total SSL grade for powerapps.com is 80/100. Grade is A. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   powerapps.com:443                       => 40.76.4.15 
+
+
+
+
+ SCAN RESULTS FOR POWERAPPS.COM:443 - 40.76.4.15
+ -----------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             powerapps.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  f120496d5f6919733c62e3ae949f737a17e06bdd
+       Common Name:                       videobreakdown.com
+       Issuer:                            Microsoft RSA TLS CA 01
+       Serial Number:                     401419653750592762289699321446146182869046934
+       Not Before:                        2021-06-29
+       Not After:                         2022-06-29
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['dynamics.com', 'ude.support.microsoft.com', 'windowsondevices.com', 'www.windowsondevices.com', 'ude.corp.microsoft.com', 'bingplaces.com', 'events.msdn.microsoft.com', 'www.hololensevents.com', 'hololensevents.com', 'solutions.diagnostics.support.microsoft.com', 'graph.microsoft.io', 'www.windowsforiotdevices.com', '*.microsoft.ch', 'powerapps.com', 'tryazuremarketplace.com', '*.microsoftedge.com', 'www.microsoftstore.ca', 'gpu.azure.com', 'videobreakdown.com', 'microsoftstore.com', 'staffhub.ms', 'reports.azure.com', 'redtigerwiki.com', 'support.microsoftaffiliates.com', 'www.meetfasttrack.com', 'meetfasttrack.com', 'microsoftcloudpartnersolutions.com', 'partner.office.com', 'microsoftstore.ca', 'customsearch.ai', 'batchaitraining.azure.com', 'www.msdn.microsoft.com', 'www.tryazuremarketplace.com', 'microsoft.org', 'www.microsoft.org', 'edge.ms', '*.edge.ms', 'msphu.net', 'storageexplorer.com', 'www.storageexplorer.com', 'msp.msdn.microsoft.com', 'www.powerapps.com', 'powerapps.io', 'www.powerapps.io', 'drumbeat.office.com', 'windowsforiotdevices.com', 'buildwindows.com', 'www.buildwindows.com', 'cortanaskills.com', 'www.staffhub.ms', 'www.cortanaskills.com', 'msfttransform.ca', 'www.msfttransform.ca', 'dynamics.cz', 'dynamics.eu', 'dynamics.sk', 'dynamics.asia', 'dynamics365.ae', 'dynamics365.at', 'dynamics365.ch', 'dynamics365.cl', 'dynamics365.co', 'dynamics365.cz', 'dynamics365.de', 'dynamics365.dk', 'dynamics365.ec', 'dynamics365.es', 'dynamics365.eu', 'dynamics365.fr', 'dynamics365.hk', 'dynamics365.in', 'dynamics365.it', 'dynamics365.lt', 'dynamics365.mx', 'dynamics365.nz', 'dynamics365.pt', 'dynamics365.ro', 'dynamics365.ru', 'dynamics365.se', 'dynamics365.us', 'dynamics365.vn', 'dynamics.com.tr', 'dynamics365.com', 'www.dynamics.cz', 'www.dynamics.eu', 'www.dynamics.sk', 'www.dynamics.com', 'www.dynamics.asia', 'www.dynamics365.ae', 'www.dynamics365.at', 'www.dynamics365.ch', 'www.dynamics365.cl', 'www.dynamics365.co', 'www.dynamics365.cz', 'www.dynamics365.de', 'www.dynamics365.dk', 'www.dynamics365.ec', 'www.dynamics365.es', 'www.dynamics365.eu', 'www.dynamics365.fr', 'www.dynamics365.hk', 'www.dynamics365.in', 'www.dynamics365.it', 'www.dynamics365.lt', 'www.dynamics365.mx', 'www.dynamics365.nz', 'www.dynamics365.pt', 'www.dynamics365.ro', 'www.dynamics365.ru', 'www.dynamics365.se', 'www.dynamics365.us', 'www.dynamics365.vn', 'www.dynamics.com.tr', 'www.dynamics365.com', 'businesscentral.be', 'businesscentral.ch', 'businesscentral.jp', 'businesscentral.mx', 'businesscentral.tw', 'businesscentral.us', 'www.businesscentral.be', 'www.businesscentral.ch', 'www.businesscentral.jp', 'www.businesscentral.mx', 'www.businesscentral.tw', 'www.businesscentral.us', 'dynamics365businesscentral.be', 'dynamics365businesscentral.ca', 'dynamics365businesscentral.ch', 'dynamics365businesscentral.co.nz', 'dynamics365businesscentral.co.za', 'dynamics365businesscentral.com.au', 'www.dynamics365businesscentral.be', 'www.dynamics365businesscentral.ca', 'www.dynamics365businesscentral.ch', 'www.dynamics365businesscentral.co.nz', 'www.dynamics365businesscentral.co.za']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    videobreakdown.com --> Microsoft RSA TLS CA 01 --> Baltimore CyberTrust Root
+       Verified Chain:                    videobreakdown.com --> Microsoft RSA TLS CA 01 --> Baltimore CyberTrust Root
+       Received Chain Contains Anchor:    WARNING - Received certificate chain contains the anchor certificate
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 3 SCTs included
+
+     Certificate #0 - OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+
+ SCAN COMPLETED IN 80.62 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   powerapps.com:443                       => 104.215.148.63 
+
+
+
+
+ SCAN RESULTS FOR POWERAPPS.COM:443 - 104.215.148.63
+ ---------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites.
+
+     The server accepted the following 2 cipher suites:
+        TLS_AES_256_GCM_SHA384                            256       ECDH: X25519 (253 bits)
+        TLS_AES_128_GCM_SHA256                            128       ECDH: X25519 (253 bits)
+
+
+
+ SCAN COMPLETED IN 39.87 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   powerapps.com:443                       => 104.215.148.63 
+
+
+
+
+ SCAN RESULTS FOR POWERAPPS.COM:443 - 104.215.148.63
+ ---------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 4 cipher suites:
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 80.02 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   powerapps.com:443                       => 104.215.148.63 
+
+
+
+
+ SCAN RESULTS FOR POWERAPPS.COM:443 - 104.215.148.63
+ ---------------------------------------------------
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 147.79 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   powerapps.com:443                       => 13.77.161.179 
+
+
+
+
+ SCAN RESULTS FOR POWERAPPS.COM:443 - 13.77.161.179
+ --------------------------------------------------
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable, RSA cipher suites not supported.
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+
+ SCAN COMPLETED IN 7.53 S
+ ------------------------

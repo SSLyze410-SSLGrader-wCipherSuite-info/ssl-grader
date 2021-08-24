@@ -1,0 +1,167 @@
+<<< Start SSL Grading <<<
+Certificate FAILED
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:-30
+TLS support score is:10
+TLS discount score is:0
+Cipher Suite score is:20
+>>>Total SSL grade for bankofindia.co.in is 0/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   bankofindia.co.in:443                       => 49.50.92.254 
+
+
+
+
+ SCAN RESULTS FOR BANKOFINDIA.CO.IN:443 - 49.50.92.254
+ -----------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             bankofindia.co.in
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  cbc42369566ab79f24a620663c6a0e232641892d
+       Common Name:                       www.bankofindia.co.in
+       Issuer:                            Entrust Certification Authority - L1M
+       Serial Number:                     149638898047517893201509737658343011234
+       Not Before:                        2019-12-31
+       Not After:                         2021-10-08
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['www.bankofindia.co.in', 'bankofindia.co.in', 'www.bankofindia.com', 'bankofindia.com', 'www.bankofindia.co.bw', 'www.bankofindia.com.hk', 'bankofindia.com.hk', 'www.bankofindia.fr', 'bankofindia.fr', 'www.bankofindia.co.nz', 'bankofindia.co.nz', 'www.bankofindia.co.za', 'bankofindia.co.za', 'www.bankofindia.uk.com', 'bankofindia.uk.com', 'www.boijapan.com', 'boijapan.com', 'www.boikenya.com', 'boikenya.com', 'www.boitanzania.co.tz', 'boitanzania.co.tz', 'www.boiuganda.co.ug', 'boiuganda.co.ug', 'www.boiusa.com', 'boiusa.com', 'www.bankofindiavn.com.vn', 'bankofindiavn.com.vn']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Java CA Store (jdk-13.0.2):        FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Mozilla CA Store (2021-01-24):     FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Windows CA Store (2021-02-08):     FAILED - Certificate is NOT Trusted: unable to get local issuer certificate
+       Symantec 2018 Deprecation:         ERROR - Could not build verified chain (certificate untrusted?)
+       Received Chain:                    www.bankofindia.co.in
+       Verified Chain:                    ERROR - Could not build verified chain (certificate untrusted?)
+       Received Chain Contains Anchor:    ERROR - Could not build verified chain (certificate untrusted?)
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      ERROR - Could not build verified chain (certificate untrusted?)
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 4 SCTs included
+
+     Certificate #0 - OCSP Stapling
+                                          NOT SUPPORTED - Server did not send back an OCSP response
+
+
+ SCAN COMPLETED IN 1.46 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   bankofindia.co.in:443                       => 49.50.92.254 
+
+
+
+
+ SCAN RESULTS FOR BANKOFINDIA.CO.IN:443 - 49.50.92.254
+ -----------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 0.88 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   bankofindia.co.in:443                       => 49.50.92.254 
+
+
+
+
+ SCAN RESULTS FOR BANKOFINDIA.CO.IN:443 - 49.50.92.254
+ -----------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 3 cipher suites:
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 6.84 S
+ ------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   bankofindia.co.in:443                       => 49.50.92.254 
+
+
+
+
+ SCAN RESULTS FOR BANKOFINDIA.CO.IN:443 - 49.50.92.254
+ -----------------------------------------------------
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 10.98 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   bankofindia.co.in:443                       => 49.50.92.254 
+
+
+
+
+ SCAN RESULTS FOR BANKOFINDIA.CO.IN:443 - 49.50.92.254
+ -----------------------------------------------------
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable, RSA cipher suites not supported.
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+
+ SCAN COMPLETED IN 1.91 S
+ ------------------------

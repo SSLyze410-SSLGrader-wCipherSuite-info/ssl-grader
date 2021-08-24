@@ -1,0 +1,185 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 OK
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:30
+TLS discount score is:-199
+Cipher Suite score is:20
+>>>Total SSL grade for lpcres.delve.office.com is -119/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   lpcres.delve.office.com:443                       => 104.110.74.76 
+
+
+
+
+ SCAN RESULTS FOR LPCRES.DELVE.OFFICE.COM:443 - 104.110.74.76
+ ------------------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             lpcres.delve.office.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  030480fd3199ce107a4a221604a7a22d01bbc33b
+       Common Name:                       lpcres.delve.office.com
+       Issuer:                            Microsoft RSA TLS CA 02
+       Serial Number:                     2832194863900188785559518373504593475456247880
+       Not Before:                        2020-10-15
+       Not After:                         2021-10-15
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['res.delve.office.com', 'lpcres.delve.office.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    lpcres.delve.office.com --> Microsoft RSA TLS CA 02
+       Verified Chain:                    lpcres.delve.office.com --> Microsoft RSA TLS CA 02 --> Baltimore CyberTrust Root
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          WARNING - Only 2 SCTs included but Google recommends 3 or more
+
+     Certificate #0 - OCSP Stapling
+       OCSP Response Status:              SUCCESSFUL
+       Validation w/ Mozilla Store:       OK - Response is trusted
+       Responder Key Hash:                b"'\xd6\xf8\t\xfb\xd0I\x9d\xbb\xdb7Js\xab\xb5~c\xd7\x04\xda"
+       Cert Status:                       GOOD
+       Cert Serial Number:                2832194863900188785559518373504593475456247880
+       This Update:                       2021-08-23
+       Next Update:                       2021-08-27
+
+
+ SCAN COMPLETED IN 97.87 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   lpcres.delve.office.com:443                       => 104.110.74.76 
+
+
+
+
+ SCAN RESULTS FOR LPCRES.DELVE.OFFICE.COM:443 - 104.110.74.76
+ ------------------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites.
+
+     The server accepted the following 5 cipher suites:
+        TLS_CHACHA20_POLY1305_SHA256                      256       ECDH: X25519 (253 bits)
+        TLS_AES_256_GCM_SHA384                            256       ECDH: X25519 (253 bits)
+        TLS_AES_128_GCM_SHA256                            128       ECDH: X25519 (253 bits)
+        TLS_AES_128_CCM_SHA256                            128       ECDH: X25519 (253 bits)
+        TLS_AES_128_CCM_8_SHA256                          128       ECDH: X25519 (253 bits)
+
+
+
+ SCAN COMPLETED IN 37.44 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   lpcres.delve.office.com:443                       => 104.110.74.76 
+
+
+
+
+ SCAN RESULTS FOR LPCRES.DELVE.OFFICE.COM:443 - 104.110.74.76
+ ------------------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 7 cipher suites:
+        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256       256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 84.19 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   lpcres.delve.office.com:443                       => 104.110.74.76 
+
+
+
+
+ SCAN RESULTS FOR LPCRES.DELVE.OFFICE.COM:443 - 104.110.74.76
+ ------------------------------------------------------------
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 143.84 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   lpcres.delve.office.com:443                       => 104.110.74.76 
+
+
+
+
+ SCAN RESULTS FOR LPCRES.DELVE.OFFICE.COM:443 - 104.110.74.76
+ ------------------------------------------------------------
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable, RSA cipher suites not supported.
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   VULNERABLE - Server honors client-initiated renegotiations
+       Secure Renegotiation:              OK - Supported
+
+
+ SCAN COMPLETED IN 5.28 S
+ ------------------------

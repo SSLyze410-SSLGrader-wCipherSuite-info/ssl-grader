@@ -1,0 +1,190 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 Not Found
+TLS12 OK
+Older SSL/TLS Found
+Vulnerable Issue Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:-5
+TLS discount score is:-199
+Cipher Suite score is:20
+>>>Total SSL grade for autologon.microsoftazuread-sso.com is -154/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   autologon.microsoftazuread-sso.com:443                       => 20.190.151.70 
+
+
+
+
+ SCAN RESULTS FOR AUTOLOGON.MICROSOFTAZUREAD-SSO.COM:443 - 20.190.151.70
+ -----------------------------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             autologon.microsoftazuread-sso.com
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  542a3baadee74ad408267f406acf2b6994f095d6
+       Common Name:                       graph.windows.net
+       Issuer:                            DigiCert SHA2 Secure Server CA
+       Serial Number:                     15392415090922824401279846535402301897
+       Not Before:                        2021-08-18
+       Not After:                         2022-08-18
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['*.aadkds.ppe.reporting.msidentity.com', '*.aadkds.prd.reporting.msidentity.com', '*.accesscontrol.aadtst3.windows-int.net', '*.accesscontrol.windows-ppe.net', '*.accesscontrol.windows.net', '*.adls.aadkds.ppe.reporting.msidentity.com', '*.adls.aadkds.prd.reporting.msidentity.com', '*.adti.aadkds.ppe.reporting.msidentity.com', '*.adti.aadkds.prd.reporting.msidentity.com', '*.authapp.net', '*.authorization.azure-ppe.net', '*.authorization.azure.net', '*.b2clogin.com', '*.cpim.windows.net', '*.d2k.aadkds.ppe.reporting.msidentity.com', '*.d2k.aadkds.prd.reporting.msidentity.com', '*.fp.measure.office.com', '*.Identity.azure-int.net', '*.Identity.azure.net', '*.login.live.com', '*.login.microsoft.com', '*.login.microsoftonline.com', '*.login.windows-ppe.net', '*.logincert.microsoft.com', '*.logincert.windows-ppe.net', '*.microsoftaik-int.azure-int.net', '*.microsoftaik.azure.net', '*.r.login.microsoft.com', '*.r.login.microsoftonline.com', '*.windows-ppe.net', 'aadg.windows.net', 'aadgv6.ppe.windows.net', 'aadgv6.windows.net', 'accesscontrol.aadtst3.windows-int.net', 'account.live-int.com', 'account.live.com', 'api.login.live-int.com', 'api.login.microsoftonline.com', 'api.password.ccsctp.com', 'api.passwordreset.microsoftonline.com', 'autologon.microsoftazuread-sso.com', 'becws.ccsctp.com', 'clientconfig.microsoftonline-p-int.net', 'clientconfig.microsoftonline-p.net', 'companymanager.ccsctp.com', 'companymanager.microsoftonline.com', 'cpim.windows.net', 'device.login.microsoftonline.com', 'device.login.windows-ppe.net', 'directoryproxy.ppe.windows.net', 'directoryproxy.windows.net', 'gatewayforking.windows.net', 'graph.ppe.windows.net', 'graph.windows.net', 'graphstore.windows.net', 'ipv6.login.live-int.com', 'login-us.microsoftonline.com', 'login.live-int.com', 'login.live.com', 'login.microsoft-ppe.com', 'login.microsoft.com', 'login.microsoftonline-int.com', 'login.microsoftonline-p.com', 'login.microsoftonline-pst.com', 'login.microsoftonline.com', 'login.passport-int.com', 'login.windows.net', 'logincert.microsoftonline-int.com', 'logincert.microsoftonline.com', 'loginnet.passport-int.com', 'microsoftaik-int.azure-int.net', 'microsoftaik.azure.net', 'msnia.login.live-int.com', 'msnialogin.passport-int.com', 'nexus.microsoftonline-p-int.com', 'nexus.microsoftonline-p.com', 'nexus.passport-int.com', 'pas.windows-ppe.net', 'pas.windows.net', 'password.ccsctp.com', 'passwordreset.activedirectory.windowsazure.us', 'passwordreset.microsoftonline.com', 'provisioning.microsoftonline.com', 'signup.live-int.com', 'signup.live.com', 'sts.windows.net', 'tools.login.live-int.com', 'xml.login.live-int.com', 'xml.login.live.com']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    graph.windows.net --> DigiCert SHA2 Secure Server CA
+       Verified Chain:                    graph.windows.net --> DigiCert SHA2 Secure Server CA --> DigiCert Global Root CA
+       Received Chain Contains Anchor:    OK - Anchor certificate not sent
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 3 SCTs included
+
+     Certificate #0 - OCSP Stapling
+       OCSP Response Status:              SUCCESSFUL
+       Validation w/ Mozilla Store:       OK - Response is trusted
+       Responder Key Hash:                b'\x0f\x80a\x1c\x821a\xd5/(\xe7\x8dF8\xb4,\xe1\xc6\xd9\xe2'
+       Cert Status:                       GOOD
+       Cert Serial Number:                15392415090922824401279846535402301897
+       This Update:                       2021-08-19
+       Next Update:                       2021-08-26
+
+
+ SCAN COMPLETED IN 133.50 S
+ --------------------------Killed
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   autologon.microsoftazuread-sso.com:443                       => 40.126.35.144 
+
+
+
+
+ SCAN RESULTS FOR AUTOLOGON.MICROSOFTAZUREAD-SSO.COM:443 - 40.126.35.144
+ -----------------------------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 13 cipher suites:
+        TLS_RSA_WITH_AES_256_GCM_SHA384                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA256                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_GCM_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168                      
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 80.47 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   autologon.microsoftazuread-sso.com:443                       => 40.126.28.14 
+
+
+
+
+ SCAN RESULTS FOR AUTOLOGON.MICROSOFTAZUREAD-SSO.COM:443 - 40.126.28.14
+ ----------------------------------------------------------------------
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 5 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168                      
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites.
+
+     The server accepted the following 5 cipher suites:
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA                     168                      
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: secp384r1 (384 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 174.37 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   autologon.microsoftazuread-sso.com:443                       => 40.126.28.11 
+
+
+
+
+ SCAN RESULTS FOR AUTOLOGON.MICROSOFTAZUREAD-SSO.COM:443 - 40.126.28.11
+ ----------------------------------------------------------------------
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 VULNERABLE - Signaling cipher suite not supported
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable.
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+
+ SCAN COMPLETED IN 7.63 S
+ ------------------------

@@ -1,0 +1,112 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 OK
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Not Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:30
+TLS discount score is:0
+Cipher Suite score is:20
+>>>Total SSL grade for crl3.digicert.com is 80/100. Grade is A. >>>
+Killed
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   crl3.digicert.com:443                       => 117.18.237.29 
+
+
+
+
+ SCAN RESULTS FOR CRL3.DIGICERT.COM:443 - 117.18.237.29
+ ------------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites.
+
+     The server accepted the following 3 cipher suites:
+        TLS_CHACHA20_POLY1305_SHA256                      256       ECDH: prime256v1 (256 bits)
+        TLS_AES_256_GCM_SHA384                            256       ECDH: prime256v1 (256 bits)
+        TLS_AES_128_GCM_SHA256                            128       ECDH: prime256v1 (256 bits)
+
+
+
+ SCAN COMPLETED IN 64.34 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   crl3.digicert.com:443                       => 117.18.237.29 
+
+
+
+
+ SCAN RESULTS FOR CRL3.DIGICERT.COM:443 - 117.18.237.29
+ ------------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 21 cipher suites:
+        TLS_RSA_WITH_SEED_CBC_SHA                         128                      
+        TLS_RSA_WITH_CAMELLIA_256_CBC_SHA                 256                      
+        TLS_RSA_WITH_CAMELLIA_128_CBC_SHA                 128                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_GCM_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+        TLS_DHE_RSA_WITH_SEED_CBC_SHA                     128       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA             256       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA             128       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_AES_256_GCM_SHA384               256       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA256               256       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA                  256       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_AES_128_GCM_SHA256               128       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA256               128       DH (2048 bits) 
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA                  128       DH (2048 bits) 
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 59.17 S
+ -------------------------Killed
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   crl3.digicert.com:443                       => 117.18.237.29 
+
+
+
+
+ SCAN RESULTS FOR CRL3.DIGICERT.COM:443 - 117.18.237.29
+ ------------------------------------------------------
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   OK - Not vulnerable
+       Secure Renegotiation:              OK - Supported
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable.
+
+
+ SCAN COMPLETED IN 9.44 S
+ ------------------------

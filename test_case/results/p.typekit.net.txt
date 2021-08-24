@@ -1,0 +1,191 @@
+<<< Start SSL Grading <<<
+Certificate integrity OK
+TLS13 OK
+TLS12 OK
+Older SSL/TLS Not Found
+Vulnerable Issue Found
+<<< End SSL Grading <<<
+>>>Start Computing score>>>
+Certificate score is:30
+TLS support score is:30
+TLS discount score is:-199
+Cipher Suite score is:20
+>>>Total SSL grade for p.typekit.net is -119/100. Grade is F. >>>
+
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   p.typekit.net:443                       => 104.76.140.232 
+
+
+
+
+ SCAN RESULTS FOR P.TYPEKIT.NET:443 - 104.76.140.232
+ ---------------------------------------------------
+
+ * Certificates Information:
+       Hostname sent for SNI:             p.typekit.net
+       Number of certificates detected:   1
+
+
+     Certificate #0 ( _RSAPublicKey )
+       SHA1 Fingerprint:                  c95b34c52fc16eb3f92da6c07bf91d6c2ecf3852
+       Common Name:                       *.typekit.net
+       Issuer:                            DigiCert TLS RSA SHA256 2020 CA1
+       Serial Number:                     12956168234191676702462502278985346847
+       Not Before:                        2021-07-16
+       Not After:                         2022-07-21
+       Public Key Algorithm:              _RSAPublicKey
+       Signature Algorithm:               sha256
+       Key Size:                          2048
+       Exponent:                          65537
+       DNS Subject Alternative Names:     ['muse.typekit.net', '*.typekit.net', 'ping.typekit.net', 'static-fonts.adobe.com', 'faster-staging.typekit.net', 'use.typekit.com', 'use-staging.typekit.net', 'faster.typekit.net', 'webfonts.creativecloud.com', 'fonts.typekit.net', 'primer.typekit.net', 'primer.typekit.com', 'use.typekit.net', 'use-devsupport.typekit.net', 'p.typekit.net', 'use.edgefonts.net', 'typekit.net']
+
+     Certificate #0 - Trust
+       Hostname Validation:               OK - Certificate matches server hostname
+       Android CA Store (9.0.0_r9):       OK - Certificate is trusted
+       Apple CA Store (iOS 14, iPadOS 14, macOS 11, watchOS 7, and tvOS 14):OK - Certificate is trusted
+       Java CA Store (jdk-13.0.2):        OK - Certificate is trusted
+       Mozilla CA Store (2021-01-24):     OK - Certificate is trusted
+       Windows CA Store (2021-02-08):     OK - Certificate is trusted
+       Symantec 2018 Deprecation:         OK - Not a Symantec-issued certificate
+       Received Chain:                    *.typekit.net --> DigiCert TLS RSA SHA256 2020 CA1 --> DigiCert Global Root CA
+       Verified Chain:                    *.typekit.net --> DigiCert TLS RSA SHA256 2020 CA1 --> DigiCert Global Root CA
+       Received Chain Contains Anchor:    WARNING - Received certificate chain contains the anchor certificate
+       Received Chain Order:              OK - Order is valid
+       Verified Chain contains SHA1:      OK - No SHA1-signed certificate in the verified certificate chain
+
+     Certificate #0 - Extensions
+       OCSP Must-Staple:                  NOT SUPPORTED - Extension not found
+       Certificate Transparency:          OK - 3 SCTs included
+
+     Certificate #0 - OCSP Stapling
+       OCSP Response Status:              SUCCESSFUL
+       Validation w/ Mozilla Store:       OK - Response is trusted
+       Responder Key Hash:                b'\xb7k\xa2\xea\xa8\xaa\x84\x8cy\xea\xb4\xda\x0f\x98\xb2\xc5\x95v\xb9\xf4'
+       Cert Status:                       GOOD
+       Cert Serial Number:                12956168234191676702462502278985346847
+       This Update:                       2021-08-22
+       Next Update:                       2021-08-29
+
+
+ SCAN COMPLETED IN 138.37 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   p.typekit.net:443                       => 104.76.140.232 
+
+
+
+
+ SCAN RESULTS FOR P.TYPEKIT.NET:443 - 104.76.140.232
+ ---------------------------------------------------
+
+ * TLS 1.3 Cipher Suites:
+     Attempted to connect using 5 cipher suites.
+
+     The server accepted the following 5 cipher suites:
+        TLS_CHACHA20_POLY1305_SHA256                      256       ECDH: X25519 (253 bits)
+        TLS_AES_256_GCM_SHA384                            256       ECDH: X25519 (253 bits)
+        TLS_AES_128_GCM_SHA256                            128       ECDH: X25519 (253 bits)
+        TLS_AES_128_CCM_SHA256                            128       ECDH: X25519 (253 bits)
+        TLS_AES_128_CCM_8_SHA256                          128       ECDH: X25519 (253 bits)
+
+
+
+ SCAN COMPLETED IN 44.14 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   p.typekit.net:443                       => 104.76.140.232 
+
+
+
+
+ SCAN RESULTS FOR P.TYPEKIT.NET:443 - 104.76.140.232
+ ---------------------------------------------------
+
+ * TLS 1.2 Cipher Suites:
+     Attempted to connect using 156 cipher suites.
+
+     The server accepted the following 13 cipher suites:
+        TLS_RSA_WITH_AES_256_GCM_SHA384                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA256                   256                      
+        TLS_RSA_WITH_AES_256_CBC_SHA                      256                      
+        TLS_RSA_WITH_AES_128_GCM_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA256                   128                      
+        TLS_RSA_WITH_AES_128_CBC_SHA                      128                      
+        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256       256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384             256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA                256       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256             128       ECDH: prime256v1 (256 bits)
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA                128       ECDH: prime256v1 (256 bits)
+
+     The group of cipher suites supported by the server has the following properties:
+       Forward Secrecy                    OK - Supported
+       Legacy RC4 Algorithm               OK - Not Supported
+
+
+
+ SCAN COMPLETED IN 81.56 S
+ -------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   p.typekit.net:443                       => 104.76.140.232 
+
+
+
+
+ SCAN RESULTS FOR P.TYPEKIT.NET:443 - 104.76.140.232
+ ---------------------------------------------------
+
+ * SSL 2.0 Cipher Suites:
+     Attempted to connect using 7 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.1 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * TLS 1.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+ * SSL 3.0 Cipher Suites:
+     Attempted to connect using 80 cipher suites; the server rejected all cipher suites.
+
+
+ SCAN COMPLETED IN 144.23 S
+ --------------------------
+ CHECKING HOST(S) AVAILABILITY
+ -----------------------------
+
+   p.typekit.net:443                       => 104.76.140.232 
+
+
+
+
+ SCAN RESULTS FOR P.TYPEKIT.NET:443 - 104.76.140.232
+ ---------------------------------------------------
+
+ * ROBOT Attack:
+                                          OK - Not vulnerable.
+
+ * OpenSSL Heartbleed:
+                                          OK - Not vulnerable to Heartbleed
+
+ * Session Renegotiation:
+       Client Renegotiation DoS Attack:   VULNERABLE - Server honors client-initiated renegotiations
+       Secure Renegotiation:              OK - Supported
+
+ * Downgrade Attacks:
+       TLS_FALLBACK_SCSV:                 OK - Supported
+
+ * OpenSSL CCS Injection:
+                                          OK - Not vulnerable to OpenSSL CCS injection
+
+
+ SCAN COMPLETED IN 5.83 S
+ ------------------------
